@@ -1,0 +1,13 @@
+.Picture {
+    background-color: white;
+    padding: 2px;
+    height: 100%;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.Picture img {
+    height: 100%;
+    width: 100%;
+}
