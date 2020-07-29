@@ -5,6 +5,7 @@ import Stories from "./components/Main/Stories/Stories";
 import Businesses from "./components/Main/Businesses/Businesses";
 import Home from "./components/Main/Home/Home";
 import About from "./components/Main/About/About";
+import ContactMe from "./components/FooterItems/ContactMe/ContactMe";
 
 class App extends Component{
     render() {
@@ -16,6 +17,7 @@ class App extends Component{
                         <Route path='/stories' component={Stories}/>
                         <Route path='/businesses' component={Businesses}/>
                         <Route path='/about' component={About}/>
+                        <Route path='/contact' component={ContactMe}/>
                         <Route path='/' component={Home}/>
                     </Switch>
                 </Layout>
