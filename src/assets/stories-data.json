@@ -1,44 +1,44 @@
 [
   {
-    "id" : 1,
+    "id": 1,
     "firstName": "Jerome",
     "lastName": "Joof",
-    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for",
-    "degree": "Bachelors degree (Married)"
+    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English.",
+    "degree": "Bachelors of Science"
   },
   {
-    "id" : 1,
+    "id": 2,
     "firstName": "Jabin",
     "lastName": "Joof",
-    "biography": "One of the best nephews in the world. The best uncle in the world, ABC, loves you always and forever.",
+    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English.",
     "degree": "pre pre"
   },
   {
-    "id" : 1,
+    "id": 3,
     "firstName": "Alhagie Bai",
     "lastName": "Cham",
-    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for",
-    "degree": ""
+    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English.",
+    "degree": "Bachelors of Science"
   },
   {
-    "id" : 1,
+    "id": 4,
     "firstName": "Ebou",
     "lastName": "Cham",
-    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for",
+    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English.",
     "degree": "Masters"
   },
   {
-    "id" : 1,
+    "id": 5,
     "firstName": "Ebrima",
     "lastName": "Wadda",
-    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for",
-    "degree": "Bachelors"
+    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English.",
+    "degree": "Bachelors of Science"
   },
   {
-    "id" : 1,
+    "id": 6,
     "firstName": "Ebrima",
     "lastName": "Tunkara",
-    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for",
+    "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English.",
     "degree": "PhD"
   }
 ]
