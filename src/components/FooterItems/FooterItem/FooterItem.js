@@ -1,11 +1,10 @@
 import React from 'react';
 import Button from "react-bootstrap/Button";
+import NavigationItem from "../../Navigation/NavigationItems/NavigationItem/NavigationItem";
 
-const FooterItem = (props) => {
+const FooterItem = () => {
     return (
-        <div>
-            <Button className='btn btn-dark'>{props.name}</Button>
-        </div>
+        <NavigationItem link='/contact'>Contact Us</NavigationItem>
     )
 };
 
