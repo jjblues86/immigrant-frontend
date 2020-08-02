@@ -1,26 +1,34 @@
 import React, {Component} from 'react';
-import Logo from "../../Navigation/Logo/Logo";
-import styles from "./Home.module.css";
-import homeImage from '../../../assets/home-image.jpg';
 import Story from "../Stories/Story/Story";
-import data from '../../../assets/stories-data.json';
+import axios from "axios";
+import Hero from './Hero';
+const config = require('../../../config.json');
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.stories = Array.from(data);
+    state = {
+        immigrants: []
+    }
+
+    getImmigrants = async () => {
+        // add call to AWS API Gateway to fetch immigrants here
+        //then set them in state
+        try {
+            const res = await axios.get(`${config.api.invokeUrl}/immigrant`);
+            this.setState({immigrants: res.data});
+        } catch (err) {
+            console.log(`An error has occured: ${err}`);
+        }
+    }
+
+    componentDidMount = () => {
+        this.getImmigrants();
     }
 
     render() {
-        const firstThree = this.stories.filter(value => (
-            value.id <= 3
-        ))
         return (
 
             <div className='container-fluid'>
-                <div className='col-xl-12'>
-                    <Logo picture={homeImage} className={styles.Picture} alternate='Home Image'/>
-                </div>
+                <Hero/>
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor eget est venenatis
                         venenatis.
@@ -45,12 +53,11 @@ class Home extends Component {
                         Vestibulum mollis aliquet mauris vel fermentum.</p>
                 </div>
                 <div className='row mb-5'>
-                    {firstThree.map(story => (
+                    {this.state.immigrants.map(immigrant => (
 
-                        <Story key={story.id}
-                               name={story.firstName + ' ' + story.lastName}
-                               degree={story.degree}
-                               biography={story.biography}/>
+                        <Story key={immigrant.id}
+                               name={immigrant.immigrantName}
+                              />
                     ))}
                 </div>
             </div>
