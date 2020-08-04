@@ -19,7 +19,7 @@ const ContactMe = () => {
             massage: Yup.string().min(10, 'At least 10 characters long').max(200, 'Max characters is 200').required('Enter a message'),
         }),
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            console.log(values);
         },
     })
 

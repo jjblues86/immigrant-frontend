@@ -1,20 +1,28 @@
 import React from 'react';
-import NavigationItems from '../NavigationItems/NavigationItems';
-import Logo from '../Logo/Logo'
-import styles from './Toolbar.module.css';
-import logoImage from '../../../assets/immigrant.png';
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import NavigationItem from "../NavigationItems/NavigationItem/NavigationItem";
+import Logo from "../Logo/Logo";
+import styles from "./Toolbar.module.css";
+import logoImage from "../../../assets/immigrant.png";
 
 const toolbar = () => {
     return (
-        <header className={styles.Toolbar}>
-            <div className={styles.Logo}>
+        <Navbar bg="dark" expand="md" sticky="top">
+            <Navbar.Brand className={styles.Logo}>
                 <Logo picture={logoImage} className={styles.Logo} alternate='Logo'/>
-            </div>
-            <nav className={styles.DeskstopOnly}>
-                <NavigationItems/>
-            </nav>
-        </header>
-    )
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+            <Navbar.Collapse id="basic-navbar-nav" className={styles.Right}>
+                <Nav>
+                    <Nav.Link><NavigationItem link='/' exact>Home</NavigationItem></Nav.Link>
+                    <Nav.Link><NavigationItem link='/stories'>Stories</NavigationItem></Nav.Link>
+                    <Nav.Link><NavigationItem link='/businesses'>Businesses</NavigationItem></Nav.Link>
+                    <Nav.Link><NavigationItem link='/about'>About</NavigationItem></Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
+    );
 };
 
 export default toolbar;
