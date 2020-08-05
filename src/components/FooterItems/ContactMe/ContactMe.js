@@ -14,9 +14,10 @@ const ContactMe = () => {
         },
         validationSchema: Yup.object({
             firstName: Yup.string().max(15, 'Must be 15 characters or less').required('First name is required'),
-            lastName: Yup.string().max(15, 'Must be 15 characters or less').required('Last name is required'),
-            email: Yup.string().email('Invalid email address').required('First name is required'),
-            massage: Yup.string().min(10, 'At least 10 characters long').max(200, 'Max characters is 200').required('Enter a message'),
+            lastName: Yup.string().max(15, 'Must be 15 characters or less').required('First name is required'),
+            /*name: Yup.string().max(30, 'Must be 15 characters or less').required('Name is required'),*/
+            email: Yup.string().email('Invalid email address').required('Email is required'),
+            message: Yup.string().max(200, 'Max characters is 200').required('Message is required'),
         }),
         onSubmit: values => {
             console.log(values);
@@ -30,6 +31,7 @@ const ContactMe = () => {
                 onSubmit={formik.handleSubmit}
 
                 style={{alignContent: "center"}}>
+
                 <div className='form-group'>
                     <label htmlFor="firstName">First Name</label>
                     <input className='form-control' id="firstName" type="text"
@@ -37,7 +39,6 @@ const ContactMe = () => {
                     {formik.touched.firstName && formik.errors.firstName ?
                         (<div className={style.Error}>{formik.errors.firstName}</div>) : null}
                 </div>
-
                 <div className='form-group'>
                     <label htmlFor="lastName">Last Name</label>
                     <input className='form-control' id="lastName" type="text"
@@ -53,10 +54,11 @@ const ContactMe = () => {
                     {formik.touched.email && formik.errors.email ?
                         (<div className={style.Error}>{formik.errors.email}</div>) : null}
                 </div>
+
                 <div className='form-group'>
                     <label htmlFor="message">Message</label>
                     <textarea className='form-control' id="message"
-                              {...formik.getFieldProps('message')}/>
+                           {...formik.getFieldProps('message')}/>
                     {formik.touched.message && formik.errors.message ?
                         (<div className={style.Error}>{formik.errors.message}</div>) : null}
                 </div>
