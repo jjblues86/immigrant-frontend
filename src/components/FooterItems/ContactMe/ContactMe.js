@@ -15,9 +15,8 @@ const ContactMe = () => {
         validationSchema: Yup.object({
             firstName: Yup.string().max(15, 'Must be 15 characters or less').required('First name is required'),
             lastName: Yup.string().max(15, 'Must be 15 characters or less').required('First name is required'),
-            /*name: Yup.string().max(30, 'Must be 15 characters or less').required('Name is required'),*/
             email: Yup.string().email('Invalid email address').required('Email is required'),
-            message: Yup.string().max(200, 'Max characters is 200').required('Message is required'),
+            message: Yup.string().min(15, 'Must be 15 characters').max(200, 'Max characters is 200').required('Message is required'),
         }),
         onSubmit: values => {
             console.log(values);
