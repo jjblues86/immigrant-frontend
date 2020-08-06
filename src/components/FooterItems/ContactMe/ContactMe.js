@@ -19,7 +19,9 @@ const ContactMe = () => {
             message: Yup.string().min(15, 'Must be 15 characters').max(200, 'Max characters is 200').required('Message is required'),
         }),
         onSubmit: values => {
-            console.log(values);
+            // console.log(values);
+            // function we need to execute when a form is submitted
+            formik.handleReset({values: ''})
         },
     })
 
