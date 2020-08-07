@@ -4,21 +4,21 @@
     "firstName": "Jerome",
     "lastName": "Joof",
     "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English.",
-    "degree": "Bachelors of Science"
+    "degree": "Bachelor of Science"
   },
   {
     "id": 2,
     "firstName": "Jabin",
     "lastName": "Joof",
     "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English.",
-    "degree": "pre pre"
+    "degree": "Pre School"
   },
   {
     "id": 3,
     "firstName": "Alhagie Bai",
     "lastName": "Cham",
     "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English.",
-    "degree": "Bachelors of Science"
+    "degree": "Bachelor of Science"
   },
   {
     "id": 4,
@@ -32,7 +32,7 @@
     "firstName": "Ebrima",
     "lastName": "Wadda",
     "biography": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letter making it look like readable English.",
-    "degree": "Bachelors of Science"
+    "degree": "Bachelor of Science"
   },
   {
     "id": 6,
