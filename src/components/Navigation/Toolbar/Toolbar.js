@@ -15,10 +15,10 @@ const toolbar = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav" className={styles.Right}>
                 <Nav>
-                    <Nav.Link><NavigationItem link='/' exact>Home</NavigationItem></Nav.Link>
-                    <Nav.Link><NavigationItem link='/stories'>Stories</NavigationItem></Nav.Link>
-                    <Nav.Link><NavigationItem link='/businesses'>Businesses</NavigationItem></Nav.Link>
-                    <Nav.Link><NavigationItem link='/about'>About</NavigationItem></Nav.Link>
+                    <NavigationItem link='/' exact>Home</NavigationItem>
+                    <NavigationItem link='/stories'>Stories</NavigationItem>
+                    <NavigationItem link='/businesses'>Businesses</NavigationItem>
+                    <NavigationItem link='/about'>About</NavigationItem>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
