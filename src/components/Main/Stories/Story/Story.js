@@ -8,45 +8,44 @@ const config = require('../../../../config.json');
 
 class Story extends Component{
     state = {
-        newImmigrant: null,
+        id: null,
         immigrants: []
     }
 
-    getImmigrants = async () => {
-        // add call to AWS API Gateway to fetch immigrants here
-        //then set them in state
-        try {
-            const res = await axios.get(`${config.api.invokeUrl}/immigrant`);
-            this.setState({immigrants: res.data});
-        } catch (err) {
-            console.log(`An error has occured: ${err}`);
-        }
-    }
-
     componentDidMount = () => {
-        this.getImmigrants();
+        let id = this.props.match.params.immigrant_id;
+        axios.get(`${config.api.invokeUrl}/immigrant/` + id)
+            .then(res => {
+                this.setState({
+                    immigrant: res.data
+                })
+            })
     }
 
     render() {
+        const {immigrants} = this.state;
+        const immigrantsList = immigrants.length ? (
+            immigrants.map(immigrant => {
+                return(
+                    <Card border="dark immigrant card" key={immigrant.id}
+                        // style={{width: '18rem', display: 'flex'}}
+                          className='col-xl-3 col-md-5 col-sm-10 mb-2 ml-5'>
+                        <Card.Img variant="top" src={picture} />
+                        <Card.Body>
+                            <Card.Title>{immigrant.immigrantName}</Card.Title>
+                            <Card.Text>{immigrant.immigrantStory}</Card.Text>
+                        </Card.Body>
+                    </Card>
+                )
+            })
+        ) : (
+            <div className="center">No stories yet.</div>
+        )
 
     return (
+
         <Auxiliary>
-
-            {this.state.immigrants.map(immigrant => (
-                <Card border="dark"
-                  style={{width: '18rem', display: 'flex'}}
-                   className='col-xl-3 col-md-5 col-sm-10 mb-2 ml-5'>
-                <Card.Img variant="top" src={picture} />
-                <Card.Body>
-                    <Card.Title>{immigrant.immigrantName}</Card.Title>
-                    <div className="buttons">
-                        <button className="button is-link is-light">Learn More</button>
-                    </div>
-                </Card.Body>
-                </Card>
-            ))}
-
-            <br/>
+          {immigrantsList}
         </Auxiliary>
     )
     }

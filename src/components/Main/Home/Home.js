@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import Story from "../Stories/Story/Story";
 import axios from "axios";
 import Hero from './Hero';
+import Card from "react-bootstrap/Card";
+import picture from "../../../assets/immigrant.png";
+import { Link } from "react-router-dom";
+
 const config = require('../../../config.json');
 
 class Home extends Component {
     state = {
-        immigrants: []
+        immigrants: [],
     }
 
     getImmigrants = async () => {
@@ -14,7 +17,7 @@ class Home extends Component {
         //then set them in state
         try {
             const res = await axios.get(`${config.api.invokeUrl}/immigrant`);
-            this.setState({immigrants: res.data});
+            this.setState({immigrants: res.data.slice(0,3)});
         } catch (err) {
             console.log(`An error has occured: ${err}`);
         }
@@ -25,6 +28,28 @@ class Home extends Component {
     }
 
     render() {
+        const {immigrants} = this.state;
+        const immigrantsList = immigrants.length ? (
+            immigrants.map(immigrant => {
+                return(
+                    <Card border="dark immigrant card" key={immigrant.id}
+                        // style={{width: '18rem', display: 'flex'}}
+                          className='col-xl-3 col-md-5 col-sm-10 mb-2 ml-5'>
+                        <Card.Img variant="top" src={picture} />
+                        <Card.Body>
+                            <Card.Title>{immigrant.immigrantName}</Card.Title>
+                            <div className="buttons">
+                                <Link to={'/' + immigrant.id}>
+                                <p>Learn More</p>
+                                </Link>
+                            </div>
+                        </Card.Body>
+                    </Card>
+                )
+            })
+        ) : (
+            <div className="center">No stories yet.</div>
+        )
         return (
 
             <div className='container-fluid'>
@@ -52,13 +77,9 @@ class Home extends Component {
                         varius ac urna ut venenatis. Aenean eleifend dui ut erat placerat, ac laoreet ligula ultrices.
                         Vestibulum mollis aliquet mauris vel fermentum.</p>
                 </div>
+                <br/>
                 <div className='row mb-5'>
-                    {this.state.immigrants.map(immigrant => (
-
-                        <Story key={immigrant.id}
-                               name={immigrant.immigrantName}
-                              />
-                    ))}
+                    {immigrantsList}
                 </div>
             </div>
         )
