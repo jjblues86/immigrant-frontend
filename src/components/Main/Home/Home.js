@@ -1,26 +1,59 @@
 import React, {Component} from 'react';
-import Logo from "../../Navigation/Logo/Logo";
-import styles from "./Home.module.css";
-import homeImage from '../../../assets/home-image.jpg';
-import Story from "../Stories/Story/Story";
-import data from '../../../assets/stories-data.json';
+import axios from "axios";
+import Hero from './Hero';
+import Card from "react-bootstrap/Card";
+import picture from "../../../assets/immigrant.png";
+import { Link } from "react-router-dom";
+
+const config = require('../../../config.json');
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-        this.stories = Array.from(data);
+    state = {
+        immigrants: [],
+    }
+
+    getImmigrants = async () => {
+        // add call to AWS API Gateway to fetch immigrants here
+        //then set them in state
+        try {
+            const res = await axios.get(`${config.api.invokeUrl}/immigrant`);
+            this.setState({immigrants: res.data.slice(0,3)});
+        } catch (err) {
+            console.log(`An error has occured: ${err}`);
+        }
+    }
+
+    componentDidMount = () => {
+        this.getImmigrants();
     }
 
     render() {
-        const firstThree = this.stories.filter(value => (
-            value.id <= 3
-        ))
+        const {immigrants} = this.state;
+        const immigrantsList = immigrants.length ? (
+            immigrants.map(immigrant => {
+                return(
+                    <Card border="dark immigrant card" key={immigrant.id}
+                        // style={{width: '18rem', display: 'flex'}}
+                          className='col-xl-3 col-md-5 col-sm-10 mb-2 ml-5'>
+                        <Card.Img variant="top" src={picture} />
+                        <Card.Body>
+                            <Card.Title>{immigrant.immigrantName}</Card.Title>
+                            <div className="buttons">
+                                <Link to={'/' + immigrant.id}>
+                                <p>Learn More</p>
+                                </Link>
+                            </div>
+                        </Card.Body>
+                    </Card>
+                )
+            })
+        ) : (
+            <div className="center">No stories yet.</div>
+        )
         return (
 
             <div className='container-fluid'>
-                <div className='col-xl-12'>
-                    <Logo picture={homeImage} className={styles.Picture} alternate='Home Image'/>
-                </div>
+                <Hero/>
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tortor eget est venenatis
                         venenatis.
@@ -44,14 +77,9 @@ class Home extends Component {
                         varius ac urna ut venenatis. Aenean eleifend dui ut erat placerat, ac laoreet ligula ultrices.
                         Vestibulum mollis aliquet mauris vel fermentum.</p>
                 </div>
+                <br/>
                 <div className='row mb-5'>
-                    {firstThree.map(story => (
-
-                        <Story key={story.id}
-                               name={story.firstName + ' ' + story.lastName}
-                               degree={story.degree}
-                               biography={story.biography}/>
-                    ))}
+                    {immigrantsList}
                 </div>
             </div>
         )
