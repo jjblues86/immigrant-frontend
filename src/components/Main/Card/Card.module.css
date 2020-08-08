@@ -1,0 +1,54 @@
+.Card {
+    width: 30%;
+    height: 200px;
+    margin: 2px 1.66%;
+    background-color: #f6f2f2;
+    box-shadow: 10px 10px 5px grey;
+    scroll-behavior: smooth;
+    scroll-margin-block: initial;
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+@media (max-width: 575.98px) {
+    .Card {
+        width: 90%;
+        height: 100px;
+        margin: 2px 5%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .Card {
+        width: 45%;
+        margin: 2px 2.5%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .Card {
+        width: 30%;
+        margin: 2px 1.666%;
+    }
+}
+
+/*4*/
+@media (min-width: 992px){
+    .Card {
+        width: 22.5%;
+        margin: 2px 1.125%;
+    }
+}
+
+.Image {
+    height: 40%;
+    width: 100%;
+}
+
+.Title {
+    height: 20%;
+}
+
+.Text {
+    height: 40%;
+}
