@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Layout from "./hoc/Layout/Layout";
 import Stories from "./components/Main/Stories/Stories";
 import Story from "./components/Main/Stories/Story/Story";
@@ -9,12 +9,11 @@ import About from "./components/Main/About/About";
 import ContactMe from "./components/FooterItems/ContactMe/ContactMe";
 
 
-class App extends Component{
+class App extends Component {
     render() {
         return (
             <div>
-                <BrowserRouter>
-                    <Layout/>
+                <Layout>
                     <Switch>
                         <Route path='/' exact component={Home}/>
                         <Route path='/home' component={Home}/>
@@ -25,7 +24,7 @@ class App extends Component{
                         <Route path='/contact' component={ContactMe}/>
                         <Route path='/:immigrant_id' component={Story}/>
                     </Switch>
-                </BrowserRouter>
+                </Layout>
             </div>
         );
     }

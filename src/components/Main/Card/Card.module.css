@@ -1,13 +1,13 @@
 .Card {
     width: 30%;
-    height: 200px;
+    height: 400px;
     margin: 2px 1.66%;
     background-color: #f6f2f2;
     box-shadow: 10px 10px 5px grey;
     scroll-behavior: smooth;
     scroll-margin-block: initial;
     border-radius: 10px;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 @media (max-width: 575.98px) {
@@ -25,30 +25,30 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) {
     .Card {
         width: 30%;
         margin: 2px 1.666%;
     }
 }
 
-/*4*/
-@media (min-width: 992px){
-    .Card {
-        width: 22.5%;
-        margin: 2px 1.125%;
-    }
-}
-
 .Image {
-    height: 40%;
+    height: 60%;
     width: 100%;
 }
 
 .Title {
-    height: 20%;
+    height: 5%;
+    margin-left: 5px;
+    font-weight: bold;
 }
 
 .Text {
-    height: 40%;
+    height: 30%;
+    margin-left: 5px;
+}
+
+.Link {
+    height: 5%;
+    align-content: center;
 }
