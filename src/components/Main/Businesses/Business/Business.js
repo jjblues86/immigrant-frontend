@@ -1,22 +1,23 @@
 import React from 'react';
 import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 
 const Business = (props) => {
     return (
         <Auxiliary>
-            <Card border="dark"
-                  style={{width: '18rem', display: 'flex'}}
-                  className='col-xl-3 col-lg-3 col-md-5 col-sm-10 mb-2 ml-5'>
-                <Card.Header style={{fontWeight: 'bold'}}>{props.name}</Card.Header>
+            <Card style={{ width: '18rem' }}>
+                <Card.Img variant="top" src="holder.js/100px180" />
                 <Card.Body>
-                    <Card.Text style={{fontStyle: 'italic'}}>
-                        {props.content}
+                    <Card.Title>Card Title</Card.Title>
+                    <Card.Text>
+                        Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
                     </Card.Text>
+                    <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
             </Card>
-            <br/>
         </Auxiliary>
     )
 };

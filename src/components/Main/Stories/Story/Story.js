@@ -8,8 +8,7 @@ const config = require('../../../../config.json');
 
 class Story extends Component{
     state = {
-        id: null,
-        immigrants: []
+        immigrant: null
     }
 
     componentDidMount = () => {
@@ -23,29 +22,24 @@ class Story extends Component{
     }
 
     render() {
-        const {immigrants} = this.state;
-        const immigrantsList = immigrants.length ? (
-            immigrants.map(immigrant => {
-                return(
-                    <Card border="dark immigrant card" key={immigrant.id}
-                        // style={{width: '18rem', display: 'flex'}}
-                          className='col-xl-3 col-md-5 col-sm-10 mb-2 ml-5'>
-                        <Card.Img variant="top" src={picture} />
-                        <Card.Body>
-                            <Card.Title>{immigrant.immigrantName}</Card.Title>
-                            <Card.Text>{immigrant.immigrantStory}</Card.Text>
-                        </Card.Body>
-                    </Card>
-                )
-            })
+        const immigrants = this.state.immigrant ? (
+            <Card border="dark"
+                  className='col-xl-1 col-md-5 col-sm-10 mb-2 ml-5'>
+                <Card.Img variant="top" src={picture} />
+                <Card.Body>
+                    <Card.Title>{this.state.immigrant.immigrantName}</Card.Title>
+                    <Card.Text>{this.state.immigrant.immigrantStory}</Card.Text>
+                </Card.Body>
+            </Card>
+
         ) : (
-            <div className="center">No stories yet.</div>
+            <div className="center">Loading Story</div>
         )
 
     return (
 
         <Auxiliary>
-          {immigrantsList}
+          {immigrants}
         </Auxiliary>
     )
     }
