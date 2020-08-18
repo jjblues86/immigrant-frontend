@@ -33,7 +33,7 @@ class Home extends Component {
             immigrants.map(immigrant => {
                 return(
                     <Card border="dark immigrant card" key={immigrant.id}
-                        // style={{width: '18rem', display: 'flex'}}
+                        style={{width: '18rem', display: 'flex'}}
                           className='col-xl-3 col-md-5 col-sm-10 mb-2 ml-5'>
                         <Card.Img variant="top" src={picture} />
                         <Card.Body>
