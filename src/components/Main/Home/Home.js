@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import Hero from './Hero';
-import Card from "react-bootstrap/Card";
+import Card from '../Card/Card';
 import picture from "../../../assets/immigrant.png";
-import { Link } from "react-router-dom";
 
 const config = require('../../../config.json');
 
@@ -29,27 +28,17 @@ class Home extends Component {
 
     render() {
         const {immigrants} = this.state;
-        const immigrantsList = immigrants.length ? (
-            immigrants.map(immigrant => {
-                return(
-                    <Card border="dark immigrant card" key={immigrant.id}
-                        // style={{width: '18rem', display: 'flex'}}
-                          className='col-xl-3 col-md-5 col-sm-10 mb-2 ml-5'>
-                        <Card.Img variant="top" src={picture} />
-                        <Card.Body>
-                            <Card.Title>{immigrant.immigrantName}</Card.Title>
-                            <div className="buttons">
-                                <Link to={'/' + immigrant.id}>
-                                <p>Learn More</p>
-                                </Link>
-                            </div>
-                        </Card.Body>
+        const immigrantsList = immigrants.length ?
+            (immigrants.map(immigrant => {
+                return (
+                    <Card key={immigrant.id}
+                          photo={picture}
+                          name={immigrant.immigrantName}
+                          story={immigrant.immigrantStory}
+                          storyId={'/' + immigrant.id}>
                     </Card>
                 )
-            })
-        ) : (
-            <div className="center">No stories yet.</div>
-        )
+            })) : (<div className="center">No stories yet.</div>)
         return (
 
             <div className='container-fluid'>
