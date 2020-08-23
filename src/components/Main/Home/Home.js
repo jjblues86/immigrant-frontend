@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import Hero from './Hero';
-import Card from "react-bootstrap/Card";
+import Card from '../Card/Card';
 import picture from "../../../assets/immigrant.png";
-import { Link } from "react-router-dom";
 
 const config = require('../../../config.json');
 
@@ -46,10 +45,7 @@ class Home extends Component {
                         </Card.Body>
                     </Card>
                 )
-            })
-        ) : (
-            <div className="center">No stories yet.</div>
-        )
+            })) : (<div className="center">No stories yet.</div>)
         return (
 
             <div className='container-fluid'>

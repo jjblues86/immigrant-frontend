@@ -3,17 +3,16 @@
     height: 400px;
     margin: 2px 1.66%;
     background-color: #f6f2f2;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 5px 5px 5px grey;
     scroll-behavior: smooth;
     scroll-margin-block: initial;
-    border-radius: 10px;
+    border-radius: 2px;
     overflow: hidden;
 }
 
 @media (max-width: 575.98px) {
     .Card {
         width: 90%;
-        height: 100px;
         margin: 2px 5%;
     }
 }
@@ -39,16 +38,18 @@
 
 .Title {
     height: 5%;
-    margin-left: 5px;
+    margin: 0 5px;
     font-weight: bold;
 }
 
 .Text {
-    height: 30%;
+    height: 25%;
     margin-left: 5px;
+    overflow: hidden;
 }
 
 .Link {
-    height: 5%;
+    height: 10%;
     align-content: center;
+    margin-left: 5px;
 }
