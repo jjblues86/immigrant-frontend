@@ -8,11 +8,11 @@ const Card = (props) => {
             <img className={style.Image} src={props.photo} alt={props.name}/>
             <h4 className={style.Title}>{props.name}</h4>
             <div className={style.Text}>
-                <p>{props.story}</p>
+                <p>{props.tag}</p>
                 <br/>
             </div>
             <div className={style.Link}>
-                <Link to={props.storyId}>
+                <Link to={props.tagId}>
                     <p>Learn More</p>
                 </Link>
             </div>

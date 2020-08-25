@@ -8,6 +8,7 @@
     scroll-margin-block: initial;
     border-radius: 2px;
     overflow: hidden;
+    text-align: center;
 }
 
 @media (max-width: 575.98px) {
