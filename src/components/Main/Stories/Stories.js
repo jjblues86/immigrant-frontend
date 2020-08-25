@@ -35,7 +35,7 @@ class Stories extends Component {
                           photo={picture}
                           name={immigrant.immigrantName}
                           tag={immigrant.immigrantStory}
-                          tadId={'/' + immigrant.id}>
+                          tagId={'/' + immigrant.id}>
                     </Card>
                 )
             })) : (<div className="center">No stories yet.</div>)

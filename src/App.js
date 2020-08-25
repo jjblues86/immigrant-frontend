@@ -7,24 +7,27 @@ import Businesses from "./components/Main/Businesses/Businesses";
 import Home from "./components/Main/Home/Home";
 import About from "./components/Main/About/About";
 import ContactMe from "./components/FooterItems/ContactMe/ContactMe";
+import history from "./hoc/history";
 
 
 class App extends Component {
     render() {
         return (
             <div>
-                <Layout>
-                    <Switch>
-                        <Route path='/' exact component={Home}/>
-                        <Route path='/home' component={Home}/>
-                        <Route path='/stories' component={Stories}/>
-                        <Route path='/businesses' component={Businesses}/>
-                        <Route path='/about' component={About}/>
-                        <Route path='/story' component={Story}/>
-                        <Route path='/contact' component={ContactMe}/>
-                        <Route path='/:immigrant_id' component={Story}/>
-                    </Switch>
-                </Layout>
+                <BrowserRouter>
+                    <Layout>
+                        <Switch>
+                            <Route path='/' exact component={Home}/>
+                            <Route path='/home' component={Home}/>
+                            <Route path='/stories' component={Stories}/>
+                            <Route path='/businesses' component={Businesses}/>
+                            <Route path='/about' component={About}/>
+                            <Route path='/story' component={Story}/>
+                            <Route path='/contact' component={ContactMe}/>
+                            <Route path='/:immigrant_id' component={Story}/>
+                        </Switch>
+                    </Layout>
+                </BrowserRouter>
             </div>
         );
     }

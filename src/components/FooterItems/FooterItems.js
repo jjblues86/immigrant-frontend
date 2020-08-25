@@ -1,18 +1,19 @@
 import React, {Component} from 'react';
+import history from "../../hoc/history";
 
-class FooterItems extends Component{
+class FooterItems extends Component {
 
     contactUsHandler = () => {
-        console.log('in contact us handler')
-        //const {history} = this.props;
-        //history.push({pathname: '/contact'})
+        history.push('/contact');
     }
+
     render() {
         return (
             <footer className='footer'>
                 <div className="content has-text-centered">
                     <button className='btn btn-info'
-                            onClick={this.contactUsHandler}>Contact Us</button>
+                            onClick={this.contactUsHandler}>Contact Us
+                    </button>
                     <p>
                         <strong>Immigrant dreams</strong> by <a href="http://theimmigrantdream.com/">JJ & ABC</a>. The
                         source code is

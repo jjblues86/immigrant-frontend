@@ -3,7 +3,6 @@ import axios from 'axios';
 import Card from "../Card/Card";
 import Auxiliary from "../../../hoc/Auxiliary/Auxiliary";
 import picture from "../../../assets/immigrant.png";
-import {Link} from "react-router-dom";
 
 const config = require('../../../config.json');
 
@@ -32,30 +31,12 @@ class Businesses extends Component {
         const businessesList = businesses.length ? (
             businesses.map(business => {
                 return (
-                    <Auxiliary>
-                        {/*<Card border="dark immigrant card" key={business.id} style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={picture} />
-                    <Card.Body>
-                        <Card.Title>Business Name: {business.businessName}</Card.Title>
-                        <Card.Text>
-                            Business Type: {business.businessType}
-                        </Card.Text>
-                        <div className="buttons">
-                            <Link to={'/' + business.id}>
-                                <p>Learn More</p>
-                            </Link>
-                        </div>
-                    </Card.Body>
-                </Card>*/}
-                        <Card key={business.id}
-                              photo={picture}
-                              name={business.businessName}
-                              tag={business.businessType}
-                              tagId={'/' + business.id}
-                        >
-
-                        </Card>
-                    </Auxiliary>
+                    <Card key={business.id}
+                          photo={picture}
+                          name={business.businessName}
+                          tag={'Business Type: ' + business.businessType}
+                          tagId={'/' + business.id}>
+                    </Card>
                 )
             })
 
