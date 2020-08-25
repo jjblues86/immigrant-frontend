@@ -4,7 +4,8 @@ class FooterItems extends Component{
 
     contactUsHandler = () => {
         console.log('in contact us handler')
-        this.props.history.push({pathname: '/contact'})
+        //const {history} = this.props;
+        //history.push({pathname: '/contact'})
     }
     render() {
         return (
