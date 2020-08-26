@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Card from "../Card/Card";
-import Auxiliary from "../../../hoc/Auxiliary/Auxiliary";
 import picture from "../../../assets/immigrant.png";
 
 const config = require('../../../config.json');
@@ -40,9 +39,7 @@ class Businesses extends Component {
                 )
             })
 
-        ) : (
-            <div className="center">No stories yet.</div>
-        )
+        ) : (<div className="center">No stories yet.</div>)
         return (
             <div>
                 <div className='row mb-5'>
@@ -52,6 +49,6 @@ class Businesses extends Component {
         )
 
     }
-};
+}
 
 export default Businesses;

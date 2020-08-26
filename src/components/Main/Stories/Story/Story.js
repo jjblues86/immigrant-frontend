@@ -3,10 +3,11 @@ import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
 import Card from "react-bootstrap/Card";
 import picture from '../../../../assets/immigrant.png'
 import axios from "axios";
+
 const config = require('../../../../config.json');
 
 
-class Story extends Component{
+class Story extends Component {
     state = {
         immigrant: null
     }
@@ -25,7 +26,7 @@ class Story extends Component{
         const immigrants = this.state.immigrant ? (
             <Card border="dark"
                   className='col-xl-1 col-md-5 col-sm-10 mb-2 ml-5'>
-                <Card.Img variant="top" src={picture} />
+                <Card.Img variant="top" src={picture}/>
                 <Card.Body>
                     <Card.Title>{this.state.immigrant.immigrantName}</Card.Title>
                     <Card.Text>{this.state.immigrant.immigrantStory}</Card.Text>
@@ -33,17 +34,15 @@ class Story extends Component{
             </Card>
 
         ) : (
-            <div className="center">Loading Story</div>
+            <div className="has-text-centered">Loading Story</div>
         )
 
-    return (
-
-        <Auxiliary>
-          {immigrants}
-        </Auxiliary>
-    )
+        return (
+            <Auxiliary>
+                {immigrants}
+            </Auxiliary>
+        )
     }
-
 };
 
 export default Story;

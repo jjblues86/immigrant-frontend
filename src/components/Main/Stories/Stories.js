@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import picture from "../../../assets/immigrant.png";
 import Card from "../Card/Card";
-import style from './Stories.module.css';
 
 const config = require('../../../config.json');
 
@@ -38,10 +37,10 @@ class Stories extends Component {
                           tagId={'/' + immigrant.id}>
                     </Card>
                 )
-            })) : (<div className="center">No stories yet.</div>)
+            })) : (<div className='center'>No stories yet.</div>)
         return (
             <div>
-                <div className={["row", style.MarginB].join(' ')}>
+                <div className="row">
                     {immigrantsList}
                 </div>
             </div>

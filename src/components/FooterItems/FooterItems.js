@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import history from "../../hoc/history";
+import style from './FooterItems.module.css';
 
 class FooterItems extends Component {
 
@@ -21,14 +22,16 @@ class FooterItems extends Component {
                         <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
                         is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
                     </p>
-                    <div>
-                        <i className="fa fa-home"/>
+
+                    <div className={style.Media}>
+                        <p className={style.Awesome}>Follow us on: </p>
+                        <i className="fab fa-instagram"/>
                         <i className="fab fa-facebook"/>
                     </div>
                 </div>
             </footer>
         )
     }
-};
+}
 
 export default FooterItems;
