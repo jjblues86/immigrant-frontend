@@ -10,8 +10,19 @@
     align-items: center;
 }
 
-.Media {
-    margin: 0 3px;
-    justify-content: center;
-    display: flex;
+/*.Media {*/
+/*    margin: 0 6px;*/
+/*    justify-content: center;*/
+/*    display: flex;*/
+/*}*/
+
+i {
+    font-size: 1.875rem;
+    color: black;
 }
+
+i:hover {
+    color: #b3d7ff;
+    cursor: pointer;
+}
+
