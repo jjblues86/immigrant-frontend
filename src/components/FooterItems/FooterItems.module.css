@@ -9,3 +9,9 @@
     border-bottom: solid 2px black;
     align-items: center;
 }
+
+.Media {
+    margin: 0 3px;
+    justify-content: center;
+    display: flex;
+}

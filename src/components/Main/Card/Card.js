@@ -6,13 +6,11 @@ const Card = (props) => {
     return (
         <div className={style.Card}>
             <img className={style.Image} src={props.photo} alt={props.name}/>
-            <h4 className={style.Title}>{props.name}</h4>
-            <div className={style.Text}>
-                <p>{props.story}</p>
-                <br/>
-            </div>
+            <h1 className={style.Name}>{props.name}</h1>
+            <p className={style.Title}>Life Student</p>
+            <p className={style.Text}>{props.tag}</p>
             <div className={style.Link}>
-                <Link to={props.storyId}>
+                <Link to={props.tagId}>
                     <p>Learn More</p>
                 </Link>
             </div>

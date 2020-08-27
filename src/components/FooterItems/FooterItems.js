@@ -1,25 +1,36 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom';
+import style from './FooterItems.module.css';
 
-const footerItems = () => {
+class FooterItems extends Component {
 
-    return (
-        <footer className='footer'>
-            <div className="content has-text-centered">
-                <button className='btn btn-primary'>Contact Us</button>
-                <p>
-                    <strong>Immigrant dreams</strong> by <a href="http://theimmigrantdream.com/">JJ & ABC</a>. The source code is
-                    licensed
-                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                    is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-                </p>
-                <div>
-                    <i className="fa fa-home"/>
-                    <i className="fab fa-facebook"/>
+    contactUsHandler = () => {
+        this.props.history.push('/contact');
+    }
+
+    render() {
+        return (
+            <footer className='footer'>
+                <div className="content has-text-centered">
+                    <button className='btn btn-info'
+                            onClick={this.contactUsHandler}>Contact Us
+                    </button>
+                    <p>
+                        <strong>Immigrant dreams</strong> by <a href="http://theimmigrantdream.com/">JJ & ABC</a>. The
+                        source code is
+                        licensed
+                        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+                        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+                    </p>
+                    <p>Follow us</p>
+                    <div className={style.Media}>
+                        <i className="fab fa-instagram"/>
+                        <i className="fab fa-facebook"/>
+                    </div>
                 </div>
-            </div>
+            </footer>
+        )
+    }
+}
 
-        </footer>
-    )
-};
-
-export default footerItems;
+export default withRouter(FooterItems);
