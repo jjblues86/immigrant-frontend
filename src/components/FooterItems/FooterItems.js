@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import history from "../../hoc/history";
+import {withRouter} from 'react-router-dom';
 import style from './FooterItems.module.css';
 
 class FooterItems extends Component {
 
     contactUsHandler = () => {
-        history.push('/contact');
+        this.props.history.push('/contact');
     }
 
     render() {
@@ -22,9 +22,8 @@ class FooterItems extends Component {
                         <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
                         is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
                     </p>
-
+                    <p>Follow us</p>
                     <div className={style.Media}>
-                        <p className={style.Awesome}>Follow us on: </p>
                         <i className="fab fa-instagram"/>
                         <i className="fab fa-facebook"/>
                     </div>
@@ -34,4 +33,4 @@ class FooterItems extends Component {
     }
 }
 
-export default FooterItems;
+export default withRouter(FooterItems);

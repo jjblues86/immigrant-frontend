@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import picture from "../../../assets/immigrant.png";
+import picture from "../../../assets/immidream.jpeg";
 import Card from "../Card/Card";
 
 const config = require('../../../config.json');
@@ -34,8 +34,8 @@ class Stories extends Component {
                           photo={picture}
                           name={immigrant.immigrantName}
                           tag={immigrant.immigrantStory}
-                          tagId={'/' + immigrant.id}>
-                    </Card>
+                          tagId={'/' + immigrant.id}
+                    />
                 )
             })) : (<div className='center'>No stories yet.</div>)
         return (

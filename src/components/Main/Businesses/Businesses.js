@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Card from "../Card/Card";
-import picture from "../../../assets/immigrant.png";
+import picture from "../../../assets/business.jpeg";
 
 const config = require('../../../config.json');
 
@@ -47,7 +47,6 @@ class Businesses extends Component {
                 </div>
             </div>
         )
-
     }
 }
 

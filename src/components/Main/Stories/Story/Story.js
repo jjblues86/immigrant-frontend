@@ -1,31 +1,36 @@
 import React, {Component} from 'react';
 import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
 import Card from "react-bootstrap/Card";
-import picture from '../../../../assets/immigrant.png'
+import picture from '../../../../assets/immidream.jpeg'
 import axios from "axios";
+import style from './Story.module.css';
 
 const config = require('../../../../config.json');
 
 
 class Story extends Component {
     state = {
-        immigrant: null
+        immigrant: null,
+        id: null
     }
 
     componentDidMount = () => {
         let id = this.props.match.params.immigrant_id;
+        this.setState({id: id});
         axios.get(`${config.api.invokeUrl}/immigrant/` + id)
             .then(res => {
                 this.setState({
-                    immigrant: res.data
-                })
-            })
+                    immigrant: res.data.filter(immi => immi.id === this.state.id)[0]
+                });
+                console.log(this.state.immigrant);
+            });
+
     }
 
     render() {
-        const immigrants = this.state.immigrant ? (
+        const immigrant = this.state.immigrant ? (
             <Card border="dark"
-                  className='col-xl-1 col-md-5 col-sm-10 mb-2 ml-5'>
+                  className={style.Story}>
                 <Card.Img variant="top" src={picture}/>
                 <Card.Body>
                     <Card.Title>{this.state.immigrant.immigrantName}</Card.Title>
@@ -39,7 +44,7 @@ class Story extends Component {
 
         return (
             <Auxiliary>
-                {immigrants}
+                {immigrant}
             </Auxiliary>
         )
     }
