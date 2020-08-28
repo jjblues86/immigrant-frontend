@@ -7,7 +7,8 @@ import Businesses from "./components/Main/Businesses/Businesses";
 import Home from "./components/Main/Home/Home";
 import About from "./components/Main/About/About";
 import ContactMe from "./components/FooterItems/ContactMe/ContactMe";
-import history from "./hoc/history";
+import Business from "./components/Main/Businesses/Business/Business";
+// import history from "./hoc/history";
 
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
                             <Route path='/story' component={Story}/>
                             <Route path='/contact' component={ContactMe}/>
                             <Route path='/:immigrant_id' component={Story}/>
+                            <Route path='/:business_id' component={Business}/>
                         </Switch>
                     </Layout>
                 </BrowserRouter>

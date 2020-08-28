@@ -15,17 +15,19 @@ class FooterItems extends Component {
                     <button className='btn btn-info'
                             onClick={this.contactUsHandler}>Contact Us
                     </button>
-                    <p>
-                        <strong>Immigrant dreams</strong> by <a href="http://theimmigrantdream.com/">JJ & ABC</a>. The
-                        source code is
-                        licensed
-                        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-                    </p>
+                    <div className="footer-bottom">
+                        <p className="text-xs-center">
+                            &copy;{new Date().getFullYear()} The Immigrant Dream - All Rights Reserved
+                        </p>
+                    </div>
                     <p>Follow us</p>
-                    <div className={style.Media}>
-                        <i className="fab fa-instagram"/>
-                        <i className="fab fa-facebook"/>
+                    <div className={style.i}>
+                        <div className="row justify-content-center">
+                            <div className="col-1">
+                                <a href="https://www.instagram.com/the_immigrantdream/?igshid=awwxanpb9zem"> <i className="fab fa-instagram"/></a>
+                                <a href="/"> <i className="fab fa-facebook"/></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </footer>
