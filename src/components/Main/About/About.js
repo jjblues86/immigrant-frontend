@@ -1,10 +1,43 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import Hero from "../Home/Hero";
 
 const About = () => {
     return (
-        <div className='container-fluid'>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-        </div>
+        <section className="container-fluid">
+            <div className="has-text-centered">
+                <h1 className="title is-1">About Us</h1>
+                <p>We are here to spread the immigrant story and shed more light about the success stories of many immigrants.</p>
+            </div>
+            <br/>
+            <div className="columns features is-centered">
+                <div className="column is-4">
+                    <div className="card is-shady">
+                        <div className="card-image has-text-centered">
+                            <i className="fa fa-paw"></i>
+                        </div>
+                        <div className="card-content">
+                            <div className="content">
+                                <h4>Mission</h4>
+                                <p>To connect the immigrant communities together and share their unique stories for inspiration and awareness. This site intends to provide a platform for the immigrant communities to grow their businesses and therefore access many customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="column is-4">
+                    <div className="card is-shady">
+                        <div className="card-image has-text-centered">
+                            <i className="fa fa-glasses"></i>
+                        </div>
+                        <div className="card-content">
+                            <div className="content">
+                                <h4>Vision</h4>
+                                <p>To connect the immigrant communities together and share their unique stories for inspiration and awareness. This site intends to provide a platform for the immigrant communities to grow their businesses and therefore access many customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     )
 };
 
