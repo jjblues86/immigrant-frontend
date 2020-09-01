@@ -19,7 +19,7 @@ class Business extends Component {
         axios.get(`${config.baseApi.baseUrl}/businesses/` + id)
             .then(res => {
                 this.setState({
-                    business: res.data.filter(immi => immi.id === this.state.id)[0]
+                    business: res.data.filter(bus => bus.id === this.state.id)[0]
                 });
                 console.log(this.state.business);
             });

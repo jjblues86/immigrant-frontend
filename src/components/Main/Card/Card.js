@@ -12,6 +12,7 @@ const Card = (props) => {
             <div className={style.Link}>
                 <Link to={props.tagId}>
                     <p>Learn More</p>
+                    {/*<button className="button is-link is-light">Learn More</button>*/}
                 </Link>
             </div>
         </div>
