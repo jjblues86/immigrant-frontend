@@ -24,10 +24,10 @@ class App extends Component {
                             <Route path='/businesses' component={Businesses}/>
                             <Route path='/about' component={About}/>
                             <Route path='/story' component={Story}/>
-                            {/*<Route path='/business' component={Business}/>*/}
-                            <Route path='/contact' component={ContactMe}/>
                             <Route path='/:immigrant_id' component={Story}/>
+                            <Route path='/business' component={Business}/>
                             <Route path='/:business_id' component={Business}/>
+                            <Route path='/contact' component={ContactMe}/>
                         </Switch>
                     </Layout>
                 </BrowserRouter>

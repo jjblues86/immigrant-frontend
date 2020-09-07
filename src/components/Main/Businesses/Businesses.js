@@ -21,6 +21,19 @@ class Businesses extends Component {
         }
     }
 
+    // handleImmigrantBusiness = async (id) => {
+    //     try {
+    //         await axios.get(`${config.baseApi.baseUrl}/businesses/{id}`)
+    //             .then(res => {
+    //                 this.setState({
+    //                     business: res.data.filter(bus => bus.id === this.state.id)
+    //                 })
+    //             })
+    //     } catch (e) {
+    //         console.log(`Unable to get a business: ${e}`);
+    //     }
+    // }
+
     componentDidMount = () => {
         this.getBusinesses();
     }
