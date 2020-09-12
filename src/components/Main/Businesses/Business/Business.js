@@ -16,7 +16,7 @@ class Business extends Component {
     componentDidMount = () => {
         let id = this.props.match.params.business_id;
         this.setState({id: id});
-        axios.get(`${config.baseApi.baseUrl}/businesses/`+id)
+        axios.get(`${config.baseApi.businessesUrl}/businesses/`+id)
             .then(res => {
                 this.setState({
                     business: res.data

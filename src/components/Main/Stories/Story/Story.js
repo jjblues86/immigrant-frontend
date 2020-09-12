@@ -18,7 +18,7 @@ class Story extends Component {
         let id = this.props.match.params.immigrant_id;
 
         this.setState({id: id});
-        axios.get(`${config.api.invokeUrl}/immigrant/` + id)
+        axios.get(`${config.api.storiesUrl}/immigrant/` + id)
             .then(res => {
                 this.setState({
                     immigrant: res.data

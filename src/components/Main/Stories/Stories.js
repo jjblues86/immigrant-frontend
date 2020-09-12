@@ -14,7 +14,7 @@ class Stories extends Component {
         // add call to AWS API Gateway to fetch immigrants here
         //then set them in state
         try {
-            const res = await axios.get(`${config.api.invokeUrl}/immigrant`);
+            const res = await axios.get(`${config.api.storiesUrl}/immigrant`);
             this.setState({immigrants: res.data});
         } catch (err) {
             console.log(`An error has occured: ${err}`);
