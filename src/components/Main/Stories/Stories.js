@@ -34,7 +34,7 @@ class Stories extends Component {
                           photo={picture}
                           name={immigrant.immigrantName}
                           tag={immigrant.immigrantStory}
-                          tagId={'/' + immigrant.id}
+                          tagId={'/story/' + immigrant.id}
                     />
                 )
             })) : (<div className='center'>No stories yet.</div>)

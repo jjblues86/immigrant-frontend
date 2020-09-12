@@ -47,7 +47,7 @@ class Businesses extends Component {
                           photo={picture}
                           name={business.businessName}
                           tag={'Business Type: ' + business.businessType}
-                          tagId={'/' + business.id}>
+                          tagId={'/business/' + business.id}>
                     </Card>
                 )
             })

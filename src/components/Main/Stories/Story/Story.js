@@ -16,15 +16,13 @@ class Story extends Component {
 
     componentDidMount = () => {
         let id = this.props.match.params.immigrant_id;
-        console.log(id)
 
         this.setState({id: id});
         axios.get(`${config.api.invokeUrl}/immigrant/` + id)
             .then(res => {
                 this.setState({
-                    immigrant: res.data.filter(immi => immi.id === this.state.id)[0]
+                    immigrant: res.data
                 });
-                console.log(this.state.immigrant);
             });
 
     }
