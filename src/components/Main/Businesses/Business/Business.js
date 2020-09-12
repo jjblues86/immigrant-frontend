@@ -16,17 +16,15 @@ class Business extends Component {
     componentDidMount = () => {
         let id = this.props.match.params.business_id;
         this.setState({id: id});
-        axios.get(`${config.baseApi.baseUrl}/businesses/{id}`)
+        axios.get(`${config.baseApi.businessesUrl}/businesses/`+id)
             .then(res => {
-                console.log(res)
                 this.setState({
-                    business: res.data.filter(bus => bus.id === this.state.id)[0]
+                    business: res.data
                 });
-                console.log(this.state.business);
             }).catch(err => {
-            console.log(err)
-        })
-    }
+            console.log(+err)
+        });
+    };
 
     render() {
         const business = this.state.business ? (

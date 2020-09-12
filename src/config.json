@@ -1,10 +1,10 @@
 {
   "baseApi": {
-    "baseUrl": "https://r3akdgv359.execute-api.us-east-1.amazonaws.com/prod"
+    "businessesUrl": "https://r3akdgv359.execute-api.us-east-1.amazonaws.com/prod"
   },
 
   "api": {
-    "invokeUrl": "https://x4ztjcp0ee.execute-api.us-east-1.amazonaws.com/prod"
+    "storiesUrl": "https://x4ztjcp0ee.execute-api.us-east-1.amazonaws.com/prod"
   }
 
 }
