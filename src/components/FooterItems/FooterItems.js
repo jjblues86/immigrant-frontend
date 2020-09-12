@@ -21,7 +21,7 @@ class FooterItems extends Component {
                         </p>
                     </div>
                     <p>Follow us</p>
-                    <div className={style.i}>
+                    <div className={style.FontAwesome}>
                         <div className="row justify-content-center">
                             <div className="col-1">
                                 <a href="https://www.instagram.com/the_immigrantdream/?igshid=awwxanpb9zem"> <i className="fab fa-instagram"/></a>

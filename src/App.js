@@ -8,7 +8,6 @@ import Home from "./components/Main/Home/Home";
 import About from "./components/Main/About/About";
 import ContactMe from "./components/FooterItems/ContactMe/ContactMe";
 import Business from "./components/Main/Businesses/Business/Business";
-// import history from "./hoc/history";
 
 
 class App extends Component {
@@ -19,15 +18,15 @@ class App extends Component {
                     <Layout>
                         <Switch>
                             <Route path='/' exact component={Home}/>
-                            <Route path='/home' component={Home}/>
-                            <Route path='/stories' component={Stories}/>
-                            <Route path='/businesses' component={Businesses}/>
-                            <Route path='/about' component={About}/>
-                            <Route path='/story' component={Story}/>
+                            <Route path='/contact' exact component={ContactMe}/>
+                            <Route path='/home' exact component={Home}/>
+                            <Route path='/stories' exact component={Stories}/>
+                            <Route path='/businesses' exact component={Businesses}/>
+                            <Route path='/about' exact component={About}/>
+                            <Route path='/story' exact component={Story}/>
+                            <Route path='/business' exact component={Business}/>
                             <Route path='/:immigrant_id' component={Story}/>
-                            <Route path='/business' component={Business}/>
                             <Route path='/:business_id' component={Business}/>
-                            <Route path='/contact' component={ContactMe}/>
                         </Switch>
                     </Layout>
                 </BrowserRouter>
