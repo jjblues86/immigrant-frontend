@@ -6,7 +6,7 @@ const About = () => {
             <div className="has-text-centered">
                 <h1 className="title is-1 has-text-info">About Us</h1>
                 <p className="has-text-black-bis has-text-justified is-size-5-widescreen has-text-weight-normal is-family-monospace">
-                    We will be spreading the immigrant story to shed more light about the success stories of so many immigrants. There are different immigrant communities from all over the world with compelling stories, and
+                    We will sharing the immigrant story to shed more light about the success stories of so many immigrants. There are different immigrant communities from all over the world with compelling stories, and
                     this site also intends to provide a platform for these immigrant communities to grow their businesses and therefore attract more customers.
                 </p>
             </div>
@@ -49,29 +49,13 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            {/*<div className="has-text-centered">*/}
-            {/*    <h3 className="title is-2 has-text-info">Our Goal</h3>*/}
-            {/*<div className="content is-italic">*/}
-            {/*    <ul className="goal">*/}
-            {/*        <li>*/}
-            {/*            Advertisement platform for immigrant businesses*/}
-            {/*        </li>*/}
-            {/*        <li>*/}
-            {/*            Connecting young professionals with their potential employers*/}
-            {/*        </li>*/}
-            {/*        <li>*/}
-            {/*            Connect with other individuals and seek mentorship or be a mentor to fellow immigrants*/}
-            {/*        </li>*/}
-            {/*    </ul>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
             <br/>
             <div className="has-text-centered">
             <h3 className="title is-2 has-text-info">Creators</h3>
             </div>
             <article className="media">
                 <figure className="media-left">
-                    <p className="image is-64x64">
+                    <p className="image is-128x128">
                         <img src="https://bulma.io/images/placeholders/128x128.png"/>
                     </p>
                 </figure>
@@ -90,7 +74,7 @@ const About = () => {
             <br/>
             <article className="media">
                 <figure className="media-left">
-                    <p className="image is-64x64">
+                    <p className="image is-128x128">
                         <img src="https://bulma.io/images/placeholders/128x128.png"/>
                     </p>
                 </figure>
