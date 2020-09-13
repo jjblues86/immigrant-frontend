@@ -4,6 +4,8 @@ import Card from "react-bootstrap/Card";
 import picture from '../../../../assets/immidream.jpeg'
 import axios from "axios";
 import style from './Story.module.css';
+import SocialShare from "./SocialShare";
+import HelmetMetaData from "./HelmetMetaData";
 
 const config = require('../../../../config.json');
 
@@ -42,10 +44,15 @@ class Story extends Component {
             <div className="has-text-centered">Loading Story</div>
         )
 
+        const { classes } = this.props;
+
         return (
             <Auxiliary>
                 {immigrant}
+                {/*<SocialShare />*/}
+                <HelmetMetaData />
             </Auxiliary>
+
         )
     }
 };

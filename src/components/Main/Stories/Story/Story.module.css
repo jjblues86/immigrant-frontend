@@ -2,3 +2,57 @@
     width: 40%;
     margin: auto;
 }
+
+/* SOCIAL SHARE */
+
+.social-title {
+    font-size: 32px;
+    font-weight: 500;
+    font-style: italic;
+    color: #333333;
+    text-align: center;
+}
+
+.social-container {
+    background: #eeeeee;
+    padding: 25px 50px;
+}
+
+a.Social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+a.social:hover {
+    transform: translateY(-2px);
+}
+
+a.youtube {
+    color: #eb3223;
+}
+
+a.facebook {
+    color: #4968ad;
+}
+
+a.twitter {
+    color: #49a1eb;
+}
+
+a.instagram {
+    color: black;
+}
+
+.socialMediaPopper {
+       top: 300px !important;
+       left: unset !important;
+       right: 0px !important;
+       display: grid;
+   }
+.socialMediaButton {
+                   height: 50px !important;
+                   width: 50px !important;
+               }
+
+

@@ -8,12 +8,26 @@ import Home from "./components/Main/Home/Home";
 import About from "./components/Main/About/About";
 import ContactMe from "./components/FooterItems/ContactMe/ContactMe";
 import Business from "./components/Main/Businesses/Business/Business";
+import HelmetMetaData from "./components/Main/Stories/Story/HelmetMetaData";
+import Popper from '@material-ui/core/Popper';
+import style from "./components/Main/Stories/Stories.module.css"
+import {
+    EmailIcon,
+    EmailShareButton,
+    FacebookIcon,
+    FacebookShareButton,
+    TwitterIcon,
+    TwitterShareButton
+} from "react-share";
 
 
 class App extends Component {
     render() {
+        // const { classes } = this.props;
         return (
             <div>
+                {/*<div className={classes.root}>*/}
+                    <HelmetMetaData></HelmetMetaData>
                 <BrowserRouter>
                     <Layout>
                         <Switch>
@@ -30,6 +44,29 @@ class App extends Component {
                         </Switch>
                     </Layout>
                 </BrowserRouter>
+                    <Popper className={style.socialMediaButton} open={true} transition>
+                        <EmailShareButton
+                            url={"http://theimmigrantdream.com/"}
+                            hashtag="#theimmigrantdream"
+                            title={"theImmigrantDream - Sharing immigrants stories"}>
+                            <EmailIcon size={32} round={true} />
+                        </EmailShareButton>
+
+                        <FacebookShareButton
+                            url={"http://theimmigrantdream.com/"}
+                            hashtag="#theimmigrantdream"
+                            title={"theImmigrantDream - Sharing immigrants stories"}>
+                            <FacebookIcon size={32} round={true} />
+                        </FacebookShareButton>
+
+                        <TwitterShareButton
+                            url={"http://theimmigrantdream.com/"}
+                            hashtag="#theimmigrantdream"
+                            title={"theImmigrantDream - Sharing immigrants stories"}>
+                            <TwitterIcon size={32} round={true} />
+                        </TwitterShareButton>
+                    </Popper>
+                {/*</div>*/}
             </div>
         );
     }
