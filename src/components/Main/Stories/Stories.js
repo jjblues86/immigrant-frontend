@@ -33,7 +33,7 @@ class Stories extends Component {
                     <Card key={immigrant.id}
                           photo={picture}
                           name={immigrant.immigrantName}
-                          tag={immigrant.immigrantStory}
+                          tag={immigrant.storyTitle}
                           tagId={'/story/' + immigrant.id}
                     />
                 )

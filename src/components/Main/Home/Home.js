@@ -34,7 +34,7 @@ class Home extends Component {
                     <Card key={immigrant.id}
                           photo={picture}
                           name={immigrant.immigrantName}
-                          tag={immigrant.immigrantStory}
+                          tag={immigrant.storyTitle}
                           tagId={'/' + immigrant.id}>
                     </Card>
                 )
