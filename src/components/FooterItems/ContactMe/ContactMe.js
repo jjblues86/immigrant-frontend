@@ -3,6 +3,7 @@ import {Formik} from "formik";
 import * as Yup from 'yup';
 import axios from 'axios';
 import style from './ContactMe.module.css'
+const  config = require("../../../config.json")
 
 class ContactMe extends Component {
     state = {
@@ -16,7 +17,6 @@ class ContactMe extends Component {
     }
 
     contactDataHandler = (values) => {
-        const url = 'https://fyq7ujacf9.execute-api.us-east-1.amazonaws.com/dev/contact-me';
         this.setState({
             values: {
                 firstName: values.firstName,
@@ -26,7 +26,7 @@ class ContactMe extends Component {
             }
         });
         const data = this.state.values;
-        axios.post(url, data)
+        axios.post(`${config.contactApi.contactUrl}`, data)
             .then(result => {
                 if (result.data.errorMessage) {
                     this.setState({emailResponse: 'Please try again in 10 minutes. Maintenance!'})

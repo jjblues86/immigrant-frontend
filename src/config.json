@@ -5,8 +5,11 @@
 
   "api": {
     "storiesUrl": "https://x4ztjcp0ee.execute-api.us-east-1.amazonaws.com/prod"
-  }
+  },
 
+  "contactApi" : {
+    "contactUrl" : "https://fyq7ujacf9.execute-api.us-east-1.amazonaws.com/dev/contact-me"
+  }
 }
 
 
