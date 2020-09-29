@@ -65,7 +65,6 @@ class ContactMe extends Component {
                     })}
                     onSubmit={(values, {resetForm}) => {
                         this.contactDataHandler(values)
-                        console.log(this.state.values)
                         resetForm({values: ''})
                     }}>
                     {formik => (<form
