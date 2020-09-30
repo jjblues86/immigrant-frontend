@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
-import Card from "react-bootstrap/Card";
 import picture from '../../../../assets/immidream.jpeg'
 import axios from "axios";
 import style from './Story.module.css';
 import SocialShare from "./SocialShare";
-import HelmetMetaData from "./HelmetMetaData";
 
 const config = require('../../../../config.json');
 
@@ -31,28 +29,43 @@ class Story extends Component {
 
     render() {
         const immigrant = this.state.immigrant ? (
-            <Card border="dark"
-                  className={style.Story}>
-                <Card.Img variant="top" src={picture}/>
-                <Card.Body>
-                    <Card.Title>{this.state.immigrant.immigrantName}</Card.Title>
-                    <Card.Text>{this.state.immigrant.immigrantStory}</Card.Text>
-                </Card.Body>
-            </Card>
+                <div className={style.Story}>
+                    <h2 className="title is-1 has-text-centered">{this.state.immigrant.immigrantName}</h2>
+                    <hr></hr>
+                    <figure className="image is-16by9">
+                    <img src={picture}/>
+                </figure>
+                <br/>
+                    <p className="has-text-black-bis has-text-justified has-text-weight-normal is-family-monospace">
+                        {this.state.immigrant.immigrantStory}
+                    </p>
+                </div>
+        ) : (
+            <div className="has-text-centered">Loading Story</div>
+        )
+
+        const immigrantSide = this.state.immigrant ? (
+            <aside className={style.Sidebar}>
+                <hr></hr>
+                <h2 className="title is-4">Hobby</h2>
+                <p className="subtitle is-5">
+                    {this.state.immigrant.immigrantHobby}
+                </p>
+                <br/>
+                <h2 className="title is-4">Origin</h2>
+                <p className="subtitle is-5">{this.state.immigrant.immigrantOrigin}</p>
+            </aside>
 
         ) : (
             <div className="has-text-centered">Loading Story</div>
         )
 
-        const { classes } = this.props;
-
         return (
             <Auxiliary>
+                {immigrantSide}
                 {immigrant}
-                {/*<SocialShare />*/}
-                <HelmetMetaData />
+                <SocialShare />
             </Auxiliary>
-
         )
     }
 };

@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Card from "../Card/Card";
 import picture from "../../../assets/business.jpeg";
+import ListGroupItem from "react-bootstrap/ListGroupItem";
+import ListGroup from "react-bootstrap/ListGroup";
 
 const config = require('../../../config.json');
 
@@ -21,19 +23,6 @@ class Businesses extends Component {
         }
     }
 
-    // handleImmigrantBusiness = async (id) => {
-    //     try {
-    //         await axios.get(`${config.baseApi.baseUrl}/businesses/{id}`)
-    //             .then(res => {
-    //                 this.setState({
-    //                     business: res.data.filter(bus => bus.id === this.state.id)
-    //                 })
-    //             })
-    //     } catch (e) {
-    //         console.log(`Unable to get a business: ${e}`);
-    //     }
-    // }
-
     componentDidMount = () => {
         this.getBusinesses();
     }
@@ -47,6 +36,7 @@ class Businesses extends Component {
                           photo={picture}
                           name={business.businessName}
                           tag={'Business Type: ' + business.businessType}
+                          address={'Address: ' + business.businessLocation}
                           tagId={'/business/' + business.id}>
                     </Card>
                 )

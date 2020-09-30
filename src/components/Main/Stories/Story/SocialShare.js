@@ -1,30 +1,30 @@
 import React from "react";
+
 import {
-    EmailShareButton, FacebookShareButton, TwitterShareButton
+    FacebookShareButton, TwitterShareButton, LinkedinShareButton
 } from "react-share";
 import {
-    EmailIcon, FacebookIcon, TwitterIcon,
+    LinkedinIcon, FacebookIcon, TwitterIcon,
 } from "react-share";
 
  const SocialShare = (props) => {
 
      return (
         <div className="social-container">
-            {/*<h3 className="social-title">Please share</h3>*/}
-            <EmailShareButton
-                url={"http://theimmigrantdream.com/"}
+            <LinkedinShareButton
+                url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
-                <EmailIcon size={32} round={true} />
-            </EmailShareButton>
+                <LinkedinIcon size={32} round={true} />
+            </LinkedinShareButton>
 
             <FacebookShareButton
-                url={"http://theimmigrantdream.com/"}
+                url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
                 <FacebookIcon size={32} round={true} />
             </FacebookShareButton>
 
             <TwitterShareButton
-                url={"http://theimmigrantdream.com/"}
+                url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
                 <TwitterIcon size={32} round={true} />
             </TwitterShareButton>

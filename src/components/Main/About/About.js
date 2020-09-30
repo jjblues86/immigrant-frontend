@@ -5,7 +5,7 @@ const About = () => {
         <section className="container-fluid">
             <div className="has-text-centered">
                 <h1 className="title is-1 has-text-info">About Us</h1>
-                <p className="has-text-black-bis has-text-justified is-size-5-widescreen has-text-weight-normal is-family-monospace">
+                <p className="has-text-black-bis has-text-justified has-text-weight-normal is-family-monospace">
                     We will share the immigrant story to shed more light about the success stories of so many immigrants. There are different immigrant communities from all over the world with compelling stories, and
                     this site also intends to provide a platform for these immigrant communities to grow their businesses and therefore attract more customers.
                 </p>
@@ -19,7 +19,7 @@ const About = () => {
                         <div className="card-content">
                             <div className="content">
                                 <h4>Our Mission</h4>
-                                <p>To connect the immigrant communities together and share their unique stories for inspiration and awareness.</p>
+                                <p>To connect the immigrant communities together and share their unique stories for inspiration, and awareness on a broader scale.</p>
                             </div>
                         </div>
                     </div>

@@ -10,6 +10,8 @@ class Home extends Component {
     state = {
         immigrants: [],
     }
+    myRef = React.createRef();
+
 
     getImmigrants = async () => {
         // add call to AWS API Gateway to fetch immigrants here
@@ -26,6 +28,25 @@ class Home extends Component {
         this.getImmigrants();
     }
 
+    prevClick = () => {
+        // alert('prev');
+        // console.log(this.myRef.current);
+        const slide = this.myRef.current;
+        slide.scrollLeft += slide.offsetWidth;
+        if(slide.scrollLeft >= (slide.scrollWidth - slide.offsetWidth)) {
+            slide.scrollLeft = 0;
+        }
+    };
+
+    nextClick = () => {
+        // alert('next');
+        const slide = this.myRef.current;
+        slide.scrollLeft -= slide.offsetWidth;
+        if(slide.scrollLeft <= 0) {
+            slide.scrollLeft = slide.scrollWidth;
+        }
+    }
+
     render() {
         const {immigrants} = this.state;
         const immigrantsList = immigrants.length ? (
@@ -35,7 +56,7 @@ class Home extends Component {
                           photo={picture}
                           name={immigrant.immigrantName}
                           tag={immigrant.storyTitle}
-                          tagId={'/' + immigrant.id}>
+                          tagId={'/story/' + immigrant.id}>
                     </Card>
                 )
             })) : (<div className="center">No stories yet.</div>)
@@ -43,7 +64,7 @@ class Home extends Component {
             <Fragment>
                 <HomeContent />
             <div className='container'>
-                <div className='row mb-5'>
+                <div className='row mb-5' ref={this.myRef}>
                     {immigrantsList}
                 </div>
             </div>
