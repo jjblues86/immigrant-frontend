@@ -10,12 +10,6 @@
     align-items: center;
 }
 
-/*.Media {*/
-/*    margin: 0 6px;*/
-/*    justify-content: center;*/
-/*    display: flex;*/
-/*}*/
-
 .FontAwesome {
     font-size: 1.875rem;
     color: black;
@@ -24,5 +18,16 @@
 .FontAwesome:hover {
     color: #b3d7ff;
     cursor: pointer;
+    text-decoration: none;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
+.Resources {
+    float: left;
+}
+
+
 

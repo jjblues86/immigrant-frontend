@@ -11,16 +11,16 @@ class FooterItems extends Component {
     render() {
         return (
             <footer className='footer'>
+                <div className={style.Resources}>
+                    <h4 className="title is-4 has-text-dark">
+                        Resources
+                    </h4>
+                    <a href="https://www.aclu.org/"><p>ACLU</p></a>
+                    <a href="https://www.uscis.gov/"><p>USCIS</p></a>
+                    <a href="https://www.boundless.com/"><p>BOUNDLESS</p></a>
+                    <a href="https://immigrationforum.org/"><p>NATIONAL IMMIGRATION FORUM</p></a>
+                </div>
                 <div className="content has-text-centered">
-                    <button className='btn btn-info'
-                            onClick={this.contactUsHandler}>Contact Us
-                    </button>
-                    <div className="footer-bottom">
-                        <p className="text-xs-center">
-                            &copy;{new Date().getFullYear()} The Immigrant Dream - All Rights Reserved
-                        </p>
-                    </div>
-                    <p>Follow us</p>
                     <div className={style.FontAwesome}>
                         <div className="row justify-content-center">
                             <div className="col-1">
@@ -28,7 +28,15 @@ class FooterItems extends Component {
                                 <a href="/"> <i className="fab fa-facebook"/></a>
                             </div>
                         </div>
+                        <button className='btn btn-info'
+                                onClick={this.contactUsHandler}>Contact Us
+                        </button>
                     </div>
+                </div>
+                <div className="footer-bottom has-text-centered">
+                    <p className="text-xs-center">
+                        &copy;{new Date().getFullYear()} The Immigrant Dream - All Rights Reserved
+                    </p>
                 </div>
             </footer>
         )

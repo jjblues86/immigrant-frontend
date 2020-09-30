@@ -1,6 +1,6 @@
 .Card {
-    width: 30%;
-    height: 400px;
+    min-width: 25%;
+    height: 300px;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #f8f8f8;
@@ -13,6 +13,33 @@
 .Card:hover {
     color: black;
     cursor: pointer;
+}
+
+.Cards{
+    min-width: 25%;
+    overflow: hidden;
+    padding: 5px;
+    border: 3px solid #eeeeee;
+}
+
+.Cards img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
 }
 
 @media (max-width: 575.99px) {
