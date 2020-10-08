@@ -15,10 +15,10 @@ class FooterItems extends Component {
                     <h4 className="title is-4 has-text-dark">
                         Resources
                     </h4>
-                    <a href="https://www.aclu.org/"><p>ACLU</p></a>
-                    <a href="https://www.uscis.gov/"><p>USCIS</p></a>
-                    <a href="https://www.boundless.com/"><p>BOUNDLESS</p></a>
-                    <a href="https://immigrationforum.org/"><p>NATIONAL IMMIGRATION FORUM</p></a>
+                    <a href="https://www.aclu.org/" target="_blank" rel="noreferrer noopener"><p>ACLU</p></a>
+                    <a href="https://www.uscis.gov/" target="_blank" rel="noreferrer noopener"><p>USCIS</p></a>
+                    <a href="https://www.boundless.com/" target="_blank" rel="noreferrer noopener"><p>BOUNDLESS</p></a>
+                    {/*<a href="https://immigrationforum.org/" target="_blank"><p>NATIONAL IMMIGRATION FORUM</p></a>*/}
                 </div>
                 <div className="content has-text-centered">
                     <div className={style.FontAwesome}>
@@ -35,7 +35,7 @@ class FooterItems extends Component {
                 </div>
                 <div className="footer-bottom has-text-centered">
                     <p className="text-xs-center">
-                        &copy;{new Date().getFullYear()} The Immigrant Dream - All Rights Reserved
+                        &copy;{new Date().getFullYear()} The Immigrant Dream - All Rights Reserved | Email: <a href="mailto:theimmidreams@gmail.com"> theimmidreams@gmail.com</a>
                     </p>
                 </div>
             </footer>
