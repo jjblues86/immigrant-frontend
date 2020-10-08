@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Card from "../Card/Card";
 import picture from "../../../assets/business.jpeg";
-import ListGroupItem from "react-bootstrap/ListGroupItem";
-import ListGroup from "react-bootstrap/ListGroup";
+import * as ReactBootstrap from "react-bootstrap";
 
 const config = require('../../../config.json');
 
@@ -36,13 +35,16 @@ class Businesses extends Component {
                           photo={picture}
                           name={business.businessName}
                           tag={'Business Type: ' + business.businessType}
-                          address={'Address: ' + business.businessLocation}
                           tagId={'/business/' + business.id}>
                     </Card>
                 )
             })
 
-        ) : (<div className="center">No stories yet.</div>)
+        ) : (
+            <div className="has-text-centered">
+                <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
+            </div>
+            )
         return (
             <div>
                 <div className='row mb-5'>

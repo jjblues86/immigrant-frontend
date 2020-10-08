@@ -3,6 +3,7 @@ import axios from "axios";
 import HomeContent from "./HomeContent";
 import Card from '../Card/Card';
 import picture from "../../../assets/immigrant.png";
+import * as ReactBootstrap from 'react-bootstrap';
 
 const config = require('../../../config.json');
 
@@ -10,8 +11,6 @@ class Home extends Component {
     state = {
         immigrants: [],
     }
-    myRef = React.createRef();
-
 
     getImmigrants = async () => {
         // add call to AWS API Gateway to fetch immigrants here
@@ -28,25 +27,6 @@ class Home extends Component {
         this.getImmigrants();
     }
 
-    prevClick = () => {
-        // alert('prev');
-        // console.log(this.myRef.current);
-        const slide = this.myRef.current;
-        slide.scrollLeft += slide.offsetWidth;
-        if(slide.scrollLeft >= (slide.scrollWidth - slide.offsetWidth)) {
-            slide.scrollLeft = 0;
-        }
-    };
-
-    nextClick = () => {
-        // alert('next');
-        const slide = this.myRef.current;
-        slide.scrollLeft -= slide.offsetWidth;
-        if(slide.scrollLeft <= 0) {
-            slide.scrollLeft = slide.scrollWidth;
-        }
-    }
-
     render() {
         const {immigrants} = this.state;
         const immigrantsList = immigrants.length ? (
@@ -54,17 +34,20 @@ class Home extends Component {
                 return(
                     <Card key={immigrant.id}
                           photo={picture}
-                          name={immigrant.immigrantName}
                           tag={immigrant.storyTitle}
                           tagId={'/story/' + immigrant.id}>
                     </Card>
                 )
-            })) : (<div className="center">No stories yet.</div>)
+            })) : (
+                 <div className="has-text-centered">
+                <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
+                 </div>
+                )
         return (
             <Fragment>
                 <HomeContent />
             <div className='container'>
-                <div className='row mb-5' ref={this.myRef}>
+                <div className='row mb-5'>
                     {immigrantsList}
                 </div>
             </div>

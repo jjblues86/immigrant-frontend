@@ -76,6 +76,7 @@
     margin-top: 5px;
     font-weight: bolder;
     font-size: 1.2rem;
+    font-family: courier, serif;
 }
 
 .Title {
@@ -88,6 +89,20 @@
     height: 28%;
     margin-left: 5px;
     overflow: hidden;
+    font-family: courier, serif;
+    /*font-weight: bolder;*/
+    font-size: 1.2rem;
+    text-decoration: #00e7eb;
+}
+
+.Paragraph {
+    height: 28%;
+    margin-left: 5px;
+    overflow: hidden;
+    font-family: courier, serif;
+    /*font-weight: bolder;*/
+    font-size: 1.2rem;
+    text-decoration: #00e7eb;
 }
 
 .Link {

@@ -1,4 +1,6 @@
 import React, {Fragment} from 'react';
+import photo from '../../../assets/Jerome.png';
+import picture from '../../../assets/Abc.png';
 
 const About = () => {
     return (
@@ -31,7 +33,7 @@ const About = () => {
                         <div className="card-content">
                             <div className="content">
                                 <h4>Our Purpose</h4>
-                                <p>Users will be able to read a featured immigrant’s story on the site and also engage with immigrant business owners.</p>
+                                <p>For people to be able to read a featured immigrant’s story on the site and also engage with immigrant business owners.</p>
                             </div>
                         </div>
                     </div>
@@ -43,7 +45,8 @@ const About = () => {
                         <div className="card-content">
                             <div className="content">
                                 <h4>Our Goal</h4>
-                                <p>Is to create an advertisement platform for immigrant businesses. Create mentorship opportunities for fellow immigrants</p>
+                                <p>Is to create an online presence
+                                    for immigrant businesses. Create mentorship opportunities for fellow immigrants</p>
                             </div>
                         </div>
                     </div>
@@ -56,7 +59,7 @@ const About = () => {
             <article className="media">
                 <figure className="media-left">
                     <p className="image is-128x128">
-                        <img src="https://bulma.io/images/placeholders/128x128.png"/>
+                        <img src={photo} />
                     </p>
                 </figure>
                 <div className="media-content">
@@ -72,10 +75,12 @@ const About = () => {
                 </div>
             </article>
             <br/>
+            <br/>
+
             <article className="media">
                 <figure className="media-left">
                     <p className="image is-128x128">
-                        <img src="https://bulma.io/images/placeholders/128x128.png"/>
+                        <img src={picture}/>
                     </p>
                 </figure>
                 <div className="media-content">
