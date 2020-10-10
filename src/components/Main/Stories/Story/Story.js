@@ -34,7 +34,7 @@ class Story extends Component {
                     <p className="has-text-centered">{this.state.immigrant.storyDate}</p>
                     <br/>
                     <figure className="image is-16by9">
-                    <img src={picture}/>
+                    <img src={picture} alt={this.state.immigrant.immigrantName}/>
                 </figure>
                 <br/>
                     <p className="has-text-black-bis has-text-justified has-text-weight-normal is-family-monospace">
