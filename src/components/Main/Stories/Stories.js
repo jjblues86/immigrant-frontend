@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import picture from "../../../assets/immidream.jpeg";
 import Card from "../Card/Card";
+import * as ReactBootstrap from "react-bootstrap";
 
 const config = require('../../../config.json');
 
@@ -32,12 +33,15 @@ class Stories extends Component {
                 return (
                     <Card key={immigrant.id}
                           photo={picture}
-                          name={immigrant.immigrantName}
                           tag={immigrant.storyTitle}
                           tagId={'/story/' + immigrant.id}
                     />
                 )
-            })) : (<div className='center'>No stories yet.</div>)
+            })) : (
+                <div className="has-text-centered">
+                    <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
+                </div>
+                )
         return (
             <div>
                 <div className="row">
