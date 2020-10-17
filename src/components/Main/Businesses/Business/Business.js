@@ -37,7 +37,7 @@ class Business extends Component {
                     <Card.Title>{this.state.business.businessName}</Card.Title>
                     <Card.Text>{this.state.business.businessDescription}</Card.Text>
                     <br/>
-                    <Card.Link>{this.state.business.businessSite}</Card.Link>
+                    <a href={this.state.business.businessSite} target="_blank" rel="noreferrer noopener">{'Go to '+ this.state.business.businessName}</a>
                 </Card.Body>
             </Card>
 

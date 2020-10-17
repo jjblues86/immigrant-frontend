@@ -34,7 +34,7 @@ class Story extends Component {
                     <p className="has-text-centered">{this.state.immigrant.storyDate}</p>
                     <br/>
                     <figure className="image is-16by9">
-                    <img src={picture}/>
+                    <img src={picture} alt={this.state.immigrant.immigrantName}/>
                 </figure>
                 <br/>
                     <p className="has-text-black-bis has-text-justified has-text-weight-normal is-family-monospace">
@@ -50,7 +50,7 @@ class Story extends Component {
 
         const immigrantSide = this.state.immigrant ? (
             <aside>
-                <hr></hr>
+                <hr/>
                 <h2 className="title is-4">Origin</h2>
                 <p className="subtitle is-5">{this.state.immigrant.immigrantOrigin}</p>
                 <br/>

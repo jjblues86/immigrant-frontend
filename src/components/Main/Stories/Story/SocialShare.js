@@ -7,26 +7,26 @@ import {
     LinkedinIcon, FacebookIcon, TwitterIcon,
 } from "react-share";
 
- const SocialShare = (props) => {
+const SocialShare = (props) => {
 
-     return (
+    return (
         <div className="social-container">
             <LinkedinShareButton
                 url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
-                <LinkedinIcon size={32} round={true} />
+                <LinkedinIcon size={32} round={true}/>
             </LinkedinShareButton>
 
             <FacebookShareButton
                 url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
-                <FacebookIcon size={32} round={true} />
+                <FacebookIcon size={32} round={true}/>
             </FacebookShareButton>
 
             <TwitterShareButton
                 url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
-                <TwitterIcon size={32} round={true} />
+                <TwitterIcon size={32} round={true}/>
             </TwitterShareButton>
         </div>
     );

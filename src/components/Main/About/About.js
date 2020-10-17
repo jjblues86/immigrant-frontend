@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import photo from '../../../assets/Jerome.png';
 import picture from '../../../assets/Abc.png';
 
@@ -59,7 +59,7 @@ const About = () => {
             <article className="media">
                 <figure className="media-left">
                     <p className="image is-128x128">
-                        <img src={photo} />
+                        <img src={photo} alt='We Are All Immigrants'/>
                     </p>
                 </figure>
                 <div className="media-content">
@@ -80,7 +80,7 @@ const About = () => {
             <article className="media">
                 <figure className="media-left">
                     <p className="image is-128x128">
-                        <img src={picture}/>
+                        <img src={picture} alt='We Are All Immigrants'/>
                     </p>
                 </figure>
                 <div className="media-content">
