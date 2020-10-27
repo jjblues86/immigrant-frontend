@@ -46,7 +46,7 @@ const About = () => {
                             <div className="content">
                                 <h4>Our Goal</h4>
                                 <p>Is to create an online presence
-                                    for immigrant businesses. Create mentorship opportunities for fellow immigrants</p>
+                                    for immigrant businesses and mentorship opportunities for fellow immigrants.</p>
                             </div>
                         </div>
                     </div>
