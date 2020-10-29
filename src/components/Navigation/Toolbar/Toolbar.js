@@ -8,7 +8,7 @@ import logoImage from "../../../assets/immigrant.png";
 
 const toolbar = () => {
     return (
-        <Navbar className="navbar is-light" expand="md" sticky="top">
+        <Navbar className={styles.NavFont} expand="md" sticky="top" style={{backgroundColor: '#e3f2fd'}}>
             <Navbar.Brand className={styles.Logo}>
                 <Logo picture={logoImage} className={styles.Logo} alternate='Logo'/>
             </Navbar.Brand>
