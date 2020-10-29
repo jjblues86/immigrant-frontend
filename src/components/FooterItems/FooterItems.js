@@ -11,15 +11,6 @@ class FooterItems extends Component {
     render() {
         return (
             <footer className='footer'>
-                <div className={style.Resources}>
-                    <h4 className="title is-4 has-text-dark">
-                        Resources
-                    </h4>
-                    <a href="https://www.aclu.org/" target="_blank" rel="noreferrer noopener"><p>ACLU</p></a>
-                    <a href="https://www.uscis.gov/" target="_blank" rel="noreferrer noopener"><p>USCIS</p></a>
-                    <a href="https://www.boundless.com/" target="_blank" rel="noreferrer noopener"><p>BOUNDLESS</p></a>
-                    {/*<a href="https://immigrationforum.org/" target="_blank"><p>NATIONAL IMMIGRATION FORUM</p></a>*/}
-                </div>
                 <div className="content has-text-centered">
                     <div className={style.FontAwesome}>
                         <div className="row justify-content-center">
