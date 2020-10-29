@@ -6,7 +6,7 @@ export default function HomeContent() {
         <Fragment>
             <Hero />
             <div className="box cta">
-                <p className="has-text-black-bis has-text-justified has-text-weight-normal is-family-monospace">
+                <p className="has-text-black-bis has-text-justified has-text-weight-normal">
                     This site is dedicated to showcase the hard working immigrants who are contributing in the communities they live in.
                     The present negative spotlight towards who immigrants are, what they contribute to society, and the dignity most portray is being construed in the media.
                     Here you'll get to read about an immigrant's story and experience the diverse backgrounds of many who gave up everything from their origin countries to pursue a dream of becoming successful in the western world.
