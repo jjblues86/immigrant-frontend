@@ -16,9 +16,10 @@ const toolbar = () => {
             <Navbar.Collapse id="basic-navbar-nav" className={styles.Right}>
                 <Nav>
                     <NavigationItem link='/' exact>Home</NavigationItem>
+                    <NavigationItem link='/about'>About</NavigationItem>
                     <NavigationItem link='/stories'>Stories</NavigationItem>
                     <NavigationItem link='/businesses'>Businesses</NavigationItem>
-                    <NavigationItem link='/about'>About</NavigationItem>
+                    <NavigationItem link='/resources'>Resources</NavigationItem>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
