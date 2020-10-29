@@ -25,7 +25,7 @@
     }
 
     .NavigationItem a {
-        color: black;
+        color: white;
         padding: 10px 10px;
         border-bottom: 4px solid transparent;
     }
@@ -33,6 +33,6 @@
     .NavigationItem a:hover, .NavigationItem a:active, .NavigationItem a.active {
         background-color: #fff;
         border-bottom: 4px solid transparent;
-        color: black;
+        color: #0984e3;
     }
 }

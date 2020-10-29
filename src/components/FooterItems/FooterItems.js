@@ -19,7 +19,7 @@ class FooterItems extends Component {
                                 <a href="/" target="_blank" rel="noreferrer noopener"> <i className="fab fa-facebook"/></a>
                             </div>
                         </div>
-                        <button className='btn btn-info'
+                        <button className='btn btn-info' style={{backgroundColor: '#0984e3'}}
                                 onClick={this.contactUsHandler}>Contact Us
                         </button>
                     </div>

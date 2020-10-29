@@ -6,7 +6,7 @@ const About = () => {
     return (
         <section className="container-fluid">
             <div className="has-text-centered">
-                <h1 className="title is-1 has-text-info">About Us</h1>
+                <h1 className={["title is-1", "Blue"].join(' ')}>About Us</h1>
                 <p className="has-text-black-bis has-text-justified has-text-weight-normal">
                     We will share the immigrant story to shed more light about the success stories of so many immigrants. There are different immigrant communities from all over the world with compelling stories, and
                     this site also intends to provide a platform for these immigrant communities to grow their businesses and therefore attract more customers.

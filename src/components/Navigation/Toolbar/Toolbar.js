@@ -1,14 +1,14 @@
 import React from 'react';
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import NavigationItem from "../NavigationItems/NavigationItem/NavigationItem";
+import NavigationItem from "../NavigationItem/NavigationItem";
 import Logo from "../Logo/Logo";
 import styles from "./Toolbar.module.css";
 import logoImage from "../../../assets/immigrant.png";
 
 const toolbar = () => {
     return (
-        <Navbar className={styles.NavFont} expand="md" sticky="top" style={{backgroundColor: '#e3f2fd'}}>
+        <Navbar className={styles.NavFont} expand="md" sticky="top">
             <Navbar.Brand className={styles.Logo}>
                 <Logo picture={logoImage} className={styles.Logo} alternate='Logo'/>
             </Navbar.Brand>
