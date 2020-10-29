@@ -35,7 +35,7 @@ class FooterItems extends Component {
                 </div>
                 <div className="footer-bottom has-text-centered">
                     <p className="text-xs-center">
-                        &copy;{new Date().getFullYear()} The Immigrant Dream - All Rights Reserved | Email: <a href="mailto:theimmidreams@gmail.com"> theimmidreams@gmail.com</a>
+                        &copy;{new Date().getFullYear()} The Immigrant Dream - All Rights Reserved
                     </p>
                 </div>
             </footer>
