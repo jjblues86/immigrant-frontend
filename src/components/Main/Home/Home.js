@@ -17,7 +17,7 @@ class Home extends Component {
         //then set them in state
         try {
             const res = await axios.get(`${config.api.storiesUrl}/immigrant`);
-            this.setState({immigrants: res.data.slice(0,3)});
+            this.setState({immigrants: res.data.slice(0, 3)});
         } catch (err) {
             console.log(`An error has occured: ${err}`);
         }
@@ -31,7 +31,7 @@ class Home extends Component {
         const {immigrants} = this.state;
         const immigrantsList = immigrants.length ? (
             immigrants.map(immigrant => {
-                return(
+                return (
                     <Card key={immigrant.id}
                           photo={picture}
                           tag={immigrant.storyTitle}
@@ -39,18 +39,18 @@ class Home extends Component {
                     </Card>
                 )
             })) : (
-                 <div className="has-text-centered">
+            <div className="has-text-centered">
                 <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
-                 </div>
-                )
+            </div>
+        )
         return (
             <Fragment>
-                <HomeContent />
-            <div className='container'>
-                <div className='row mb-5'>
-                    {immigrantsList}
+                <HomeContent/>
+                <div className='container'>
+                    <div className='row mb-5'>
+                        {immigrantsList}
+                    </div>
                 </div>
-            </div>
             </Fragment>
         )
     }
