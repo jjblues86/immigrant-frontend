@@ -37,7 +37,7 @@ class Story extends Component {
                     <img src={picture} alt={this.state.immigrant.immigrantName}/>
                 </figure>
                 <br/>
-                    <p className="has-text-black-bis has-text-justified has-text-weight-normal is-family-monospace">
+                    <p className="has-text-black-bis has-text-justified has-text-weight-normal">
                         {this.state.immigrant.immigrantStory}
                     </p>
                 </div>

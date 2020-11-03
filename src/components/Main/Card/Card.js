@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 const Card = (props) => {
     return (
-        <div className={style.Card}>
+        <div className={[style.Card, "card is-shady"].join(' ')}>
             <img className={style.Image} src={props.photo} alt={props.name}/>
             <h1 className={style.Name}>{props.name}</h1>
             <h2 className={style.Text}>{props.tag}</h2>

@@ -1,8 +1,5 @@
-.Error {
-    color: #991a1a;
-}
-
-.Intro {
+.Resources {
     text-align: center;
+    font-weight: bold;
     font-size: 1.5em;
 }

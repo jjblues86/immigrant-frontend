@@ -11,15 +11,6 @@ class FooterItems extends Component {
     render() {
         return (
             <footer className='footer'>
-                <div className={style.Resources}>
-                    <h4 className="title is-4 has-text-dark">
-                        Resources
-                    </h4>
-                    <a href="https://www.aclu.org/" target="_blank" rel="noreferrer noopener"><p>ACLU</p></a>
-                    <a href="https://www.uscis.gov/" target="_blank" rel="noreferrer noopener"><p>USCIS</p></a>
-                    <a href="https://www.boundless.com/" target="_blank" rel="noreferrer noopener"><p>BOUNDLESS</p></a>
-                    {/*<a href="https://immigrationforum.org/" target="_blank"><p>NATIONAL IMMIGRATION FORUM</p></a>*/}
-                </div>
                 <div className="content has-text-centered">
                     <div className={style.FontAwesome}>
                         <div className="row justify-content-center">
@@ -28,14 +19,14 @@ class FooterItems extends Component {
                                 <a href="/" target="_blank" rel="noreferrer noopener"> <i className="fab fa-facebook"/></a>
                             </div>
                         </div>
-                        <button className='btn btn-info'
+                        <button className='btn btn-info' style={{backgroundColor: '#0984e3'}}
                                 onClick={this.contactUsHandler}>Contact Us
                         </button>
                     </div>
                 </div>
                 <div className="footer-bottom has-text-centered">
                     <p className="text-xs-center">
-                        &copy;{new Date().getFullYear()} The Immigrant Dream - All Rights Reserved | Email: <a href="mailto:theimmidreams@gmail.com"> theimmidreams@gmail.com</a>
+                        &copy;{new Date().getFullYear()} The Immigrant Dream - All Rights Reserved
                     </p>
                 </div>
             </footer>

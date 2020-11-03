@@ -5,28 +5,20 @@ import picture from '../../../assets/Abc.png';
 const About = () => {
     return (
         <section className="container-fluid">
-            <div className="has-text-centered">
-                <h1 className="title is-1 has-text-info">About Us</h1>
-                <p className="has-text-black-bis has-text-justified has-text-weight-normal is-family-monospace">
-                    We will share the immigrant story to shed more light about the success stories of so many immigrants. There are different immigrant communities from all over the world with compelling stories, and
-                    this site also intends to provide a platform for these immigrant communities to grow their businesses and therefore attract more customers.
-                </p>
-            </div>
-            <br/>
-            <div className="columns features is-centered">
-                <div className="column is-4">
+            <div className="row">
+                <div className="col-lg-4 col-sm-12">
                     <div className="card is-shady">
                         <div className="card-image has-text-centered">
                         </div>
                         <div className="card-content">
                             <div className="content">
                                 <h4>Our Mission</h4>
-                                <p>To connect the immigrant communities together and share their unique stories for inspiration, and awareness on a broader scale.</p>
+                                <p>To connect the immigrant communities together and share their unique stories for inspiration and awareness on a broader scale.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="column is-4">
+                <div className="col-lg-4 col-sm-12">
                     <div className="card is-shady">
                         <div className="card-image has-text-centered">
                         </div>
@@ -38,15 +30,14 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className="column is-4">
+                <div className="col-lg-4 col-sm-12">
                     <div className="card is-shady">
                         <div className="card-image has-text-centered">
                         </div>
                         <div className="card-content">
                             <div className="content">
                                 <h4>Our Goal</h4>
-                                <p>Is to create an online presence
-                                    for immigrant businesses and mentorship opportunities for fellow immigrants.</p>
+                                <p>Is to create an online presence for immigrant businesses and mentorship opportunities for fellow immigrants.</p>
                             </div>
                         </div>
                     </div>
@@ -95,6 +86,7 @@ const About = () => {
                     </div>
                 </div>
             </article>
+            <br/>
         </section>
     )
 };

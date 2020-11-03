@@ -71,6 +71,10 @@ class ContactMe extends Component {
                         onSubmit={formik.handleSubmit}
                         className='col-lg-6 col-md-8 col-sm-12 m-auto'
                         style={{alignContent: "center"}}>
+                        <p className={style.Intro}>
+                            <strong>Please fill out the form below for further inquiry</strong>
+                        </p>
+                        <br/>
                         <div className='form-group'>
                             <label htmlFor="firstName">First Name</label>
                             <input className='form-control' id="firstName" type="text"

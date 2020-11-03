@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationItem from "../../Navigation/NavigationItems/NavigationItem/NavigationItem";
+import NavigationItem from "../../Navigation/NavigationItem/NavigationItem";
 
 const FooterItem = () => {
     return (
