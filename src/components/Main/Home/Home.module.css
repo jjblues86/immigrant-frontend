@@ -11,3 +11,59 @@
     height: 100%;
     width: 100%;
 }
+
+/* classNames for card*/
+.Card {
+    min-width: 25%;
+    height: 300px;
+    margin: 10px 25%;
+    background-color: #f8f8f8;
+    text-align: center;
+    scroll-behavior: smooth;
+    border-radius: 5px;
+    text-decoration: none;
+    justify-content: center;
+}
+
+@media (max-width: 575.99px) {
+    .Card {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 850px) {
+    .Card {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+.Card:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.Image {
+    height: 80%;
+    width: 100%;
+}
+
+.Title {
+    height: 12%;
+    font-style: oblique;
+    font-size: 1.1rem;
+}
+
+.Link {
+    height: 8%;
+    width: 100%;
+    cursor: pointer;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+}
+
+.Link:hover {
+    background-color: #0984e3;
+}

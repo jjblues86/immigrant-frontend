@@ -1,9 +1,11 @@
 import React, {Component, Fragment} from 'react';
 import axios from "axios";
-import HomeContent from "./HomeContent";
-import Card from '../Card/Card';
-import picture from "../../../assets/immigrant.png";
 import * as ReactBootstrap from 'react-bootstrap';
+import Carousel from "react-bootstrap/Carousel";
+import picture from "../../../assets/immigrant.png";
+import Card from '../Card/Card';
+import HomeContent from "./HomeContent";
+import styles from './Home.module.css'
 
 const config = require('../../../config.json');
 
@@ -17,7 +19,7 @@ class Home extends Component {
         //then set them in state
         try {
             const res = await axios.get(`${config.api.storiesUrl}/immigrant`);
-            this.setState({immigrants: res.data.slice(0, 3)});
+            this.setState({immigrants: res.data});
         } catch (err) {
             console.log(`An error has occured: ${err}`);
         }
@@ -29,31 +31,39 @@ class Home extends Component {
 
     render() {
         const {immigrants} = this.state;
-        const immigrantsList = immigrants.length ? (
-            immigrants.map(immigrant => {
-                return (
-                    <Card key={immigrant.id}
-                          photo={picture}
-                          tag={immigrant.storyTitle}
-                          tagId={'/story/' + immigrant.id}>
-                    </Card>
-                )
-            })) : (
-            <div className="has-text-centered">
-                <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
+        const immigrantsList = immigrants.length ?
+            <div>
+                <Carousel>
+                    {immigrants.map(immigrant => (
+                        <Carousel.Item>
+                            <Card
+                                cardClass={styles.Card}
+                                imageClass={styles.Image}
+                                textClass={styles.Title}
+                                linkClass={styles.Link}
+
+                                key={immigrant.id}
+                                photo={picture}
+                                tag={immigrant.storyTitle}
+                                tagId={'/story/' + immigrant.id}>
+                            </Card>
+                        </Carousel.Item>)
+                    )} </Carousel>
             </div>
-        )
+            : (
+                <div className="has-text-centered">
+                    <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
+                </div>
+            )
         return (
             <Fragment>
                 <HomeContent/>
-                <div className='container'>
-                    <div className='row mb-5'>
-                        {immigrantsList}
-                    </div>
+                <div style={{margin: "auto"}}>
+                    {immigrantsList}
                 </div>
             </Fragment>
         )
     }
-};
+}
 
 export default Home;
