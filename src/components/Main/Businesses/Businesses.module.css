@@ -50,7 +50,7 @@
     }
 }
 
-@media (min-width: 576px) and (max-width: 850px) {
+@media (min-width: 576px) and (max-width: 1050px) {
     .Card {
         width: 40%;
         margin-left: 5%;
@@ -58,7 +58,7 @@
     }
 }
 
-@media (min-width: 850px){
+@media (min-width: 1050px){
     .Card {
         width: 30%;
         margin-left: 1.666%;
@@ -100,15 +100,4 @@
     text-decoration: #00e7eb;
 }
 
-.Link {
-    height: 12%;
-    width: 100%;
-    cursor: pointer;
-    color: #ffffff;
-    border: none;
-    text-decoration: none;
-}
-
-a {
-    text-decoration: none;
-}
+/* 10% for Link in index.css */

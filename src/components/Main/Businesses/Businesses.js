@@ -36,8 +36,8 @@ class Businesses extends Component {
                         cardClass={styles.Card}
                         imageClass={styles.Image}
                         textClass={styles.Title}
-                        linkClass={styles.Link}
                         nameClass={styles.Name}
+                        linkClass={"Link"}
 
                         key={business.id}
                         photo={picture}

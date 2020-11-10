@@ -57,7 +57,7 @@ classNames
     }
 }
 
-@media (min-width: 576px) and (max-width: 850px) {
+@media (min-width: 576px) and (max-width: 1050px) {
     .Card {
         width: 40%;
         margin-left: 5%;
@@ -65,7 +65,7 @@ classNames
     }
 }
 
-@media (min-width: 850px) {
+@media (min-width: 1050px) {
     .Card {
         width: 30%;
         margin-left: 1.666%;
@@ -73,26 +73,4 @@ classNames
     }
 }
 
-.Image {
-    height: 76%;
-    width: 100%;
-}
-
-.Title {
-    height: 14%;
-    font-style: oblique;
-    font-size: 1.1rem;
-}
-
-.Link {
-    height: 10%;
-    width: 100%;
-    cursor: pointer;
-    color: #ffffff;
-    border: none;
-    text-decoration: none;
-}
-
-a {
-    text-decoration: none;
-}
+/* classes for the items in the card are in index.css */

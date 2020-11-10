@@ -6,7 +6,7 @@ const About = () => {
     return (
         <section className="container-fluid">
             <div className="has-text-centered">
-                <h1 className="title is-1 has-text-info">About Us</h1>
+                <h1 className="title is-1 Blue">About Us</h1>
             </div>
             <br/>
             <div className="row">
@@ -49,7 +49,7 @@ const About = () => {
             </div>
             <br/>
             <div className="has-text-centered">
-            <h3 className="title is-2 has-text-info">Creators</h3>
+            <h3 className="title is-2 Blue">Creators</h3>
             </div>
             <article className="media">
                 <figure className="media-left">

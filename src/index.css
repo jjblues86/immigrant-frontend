@@ -6,3 +6,36 @@ body {
 .Blue {
     color: #0984e3;
 }
+
+/* for story card */
+.Image {
+    height: 66%;
+    width: 100%;
+}
+
+.Name {
+    height: 12%;
+    margin-top: 5px;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.Title {
+    margin-top: 5px;
+    height: 12%;
+    font-style: oblique;
+    font-size: 1.1rem;
+}
+
+.Link {
+    height: 10%;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+.Link:hover {
+    color: white;
+    background-color: #0984e3;
+}

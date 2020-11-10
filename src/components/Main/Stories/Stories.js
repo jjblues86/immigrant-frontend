@@ -18,6 +18,7 @@ class Stories extends Component {
         try {
             const res = await axios.get(`${config.api.storiesUrl}/immigrant`);
             this.setState({immigrants: res.data});
+            console.log(this.state.immigrants)
         } catch (err) {
             console.log(`An error has occured: ${err}`);
         }
@@ -34,12 +35,14 @@ class Stories extends Component {
                 return (
                     <Card
                         cardClass={styles.Card}
-                        imageClass={styles.Image}
-                        textClass={styles.Title}
-                        linkClass={styles.Link}
+                        imageClass={"Image"}
+                        nameClass={"Name"}
+                        textClass={"Title"}
+                        linkClass={"Link"}
 
                         key={immigrant.id}
                         photo={picture}
+                        name={immigrant.immigrantName}
                         tag={immigrant.storyTitle}
                         tagId={'/story/' + immigrant.id}
                     />
@@ -57,7 +60,7 @@ class Stories extends Component {
             </div>
         )
     }
-};
+}
 
 export default Stories;
 

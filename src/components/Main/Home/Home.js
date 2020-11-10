@@ -38,12 +38,14 @@ class Home extends Component {
                         <Carousel.Item>
                             <Card
                                 cardClass={styles.Card}
-                                imageClass={styles.Image}
-                                textClass={styles.Title}
-                                linkClass={styles.Link}
+                                imageClass={"Image"}
+                                nameClass={"Name"}
+                                textClass={"Title"}
+                                linkClass={"Link"}
 
                                 key={immigrant.id}
                                 photo={picture}
+                                name={immigrant.immigrantName}
                                 tag={immigrant.storyTitle}
                                 tagId={'/story/' + immigrant.id}>
                             </Card>

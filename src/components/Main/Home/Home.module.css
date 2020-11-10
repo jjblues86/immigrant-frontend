@@ -32,38 +32,12 @@
     }
 }
 
-@media (min-width: 576px) and (max-width: 850px) {
+@media (min-width: 576px) and (max-width: 1050px) {
     .Card {
         margin-left: 5%;
         margin-right: 5%;
     }
 }
 
-.Card:hover {
-    color: black;
-    cursor: pointer;
-}
+/* classes for the items in the card are in index.css */
 
-.Image {
-    height: 80%;
-    width: 100%;
-}
-
-.Title {
-    height: 12%;
-    font-style: oblique;
-    font-size: 1.1rem;
-}
-
-.Link {
-    height: 8%;
-    width: 100%;
-    cursor: pointer;
-    color: #ffffff;
-    border: none;
-    text-decoration: none;
-}
-
-.Link:hover {
-    background-color: #0984e3;
-}
