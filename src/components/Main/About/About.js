@@ -5,6 +5,10 @@ import picture from '../../../assets/Abc.png';
 const About = () => {
     return (
         <section className="container-fluid">
+            <div className="has-text-centered">
+                <h1 className="title is-1 has-text-info">About Us</h1>
+            </div>
+            <br/>
             <div className="row">
                 <div className="col-lg-4 col-sm-12">
                     <div className="card is-shady">
@@ -56,7 +60,7 @@ const About = () => {
                 <div className="media-content">
                     <div className="content">
                         <p>
-                            <strong>Jerome Joof</strong> <small>@jjblues86</small>
+                            <strong>Jerome Joof</strong>
                             <br/>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
                                 pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis
@@ -77,7 +81,7 @@ const About = () => {
                 <div className="media-content">
                     <div className="content">
                         <p>
-                            <strong>Alhagie Bai Cham</strong> <small>@abc</small>
+                            <strong>Alhagie Bai Cham</strong>
                             <br/>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
                             pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis

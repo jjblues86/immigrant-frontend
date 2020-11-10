@@ -9,7 +9,17 @@ aside {
     text-align: center;
     font-size: 20px;
     padding: 20px 25px;
-    height: 67vh;
     margin-bottom: 15px;
-    top: 65%;
 }
+
+@media (min-width: 448px) {
+    aside {
+        width: 115.2px;
+    }
+}
+    @media (min-width: 412px) {
+        aside {
+            margin-right: 12.8px;
+            margin-left: 12.8px;
+        }
+    }

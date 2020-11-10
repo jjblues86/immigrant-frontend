@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
-import Card from "react-bootstrap/Card";
 import picture from '../../../../assets/business.jpeg'
 import axios from "axios";
 import style from './Business.module.css';
@@ -29,17 +28,17 @@ class Business extends Component {
 
     render() {
         const business = this.state.business ? (
-            <Card border="dark"
+            <div border="dark"
                   className={style.Business}
             >
-                <Card.Img variant="top" src={picture}/>
-                <Card.Body>
-                    <Card.Title>{this.state.business.businessName}</Card.Title>
-                    <Card.Text>{this.state.business.businessDescription}</Card.Text>
+                    <h2 className="title is-1 has-text-centered">{this.state.business.businessName}</h2>
+                    <figure className="image is-16by9">
+                        <img src={picture} alt={this.state.business.immigrantName}/>
+                    </figure>
                     <br/>
+                    <p className=" has-text-justified">{this.state.business.businessDescription}</p>
                     <a href={this.state.business.businessSite} target="_blank" rel="noreferrer noopener">{'Go to '+ this.state.business.businessName}</a>
-                </Card.Body>
-            </Card>
+            </div>
 
         ) : (
             <div className="has-text-centered">
@@ -49,7 +48,6 @@ class Business extends Component {
 
         const businessSide = this.state.business ? (
             <aside>
-                <hr></hr>
                 <h2 className="title is-4">Products</h2>
                 <p className="subtitle is-5">{this.state.business.businessProducts}</p>
                 <br/>

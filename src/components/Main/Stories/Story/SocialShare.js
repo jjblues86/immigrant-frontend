@@ -1,4 +1,5 @@
 import React from "react";
+import style from './Story.module.css'
 
 import {
     FacebookShareButton, TwitterShareButton, LinkedinShareButton
@@ -10,7 +11,7 @@ import {
 const SocialShare = (props) => {
 
     return (
-        <div className="social-container">
+        <div className={style.Social}>
             <LinkedinShareButton
                 url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
