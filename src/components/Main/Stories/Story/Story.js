@@ -50,7 +50,7 @@ class Story extends Component {
 
         const immigrantSide = this.state.immigrant ? (
             <aside>
-                <hr/>
+                {/*<hr/>*/}
                 <h2 className="title is-4">Origin</h2>
                 <p className="subtitle is-5">{this.state.immigrant.immigrantOrigin}</p>
                 <br/>

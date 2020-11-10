@@ -16,7 +16,7 @@ class FooterItems extends Component {
                         <div className="row justify-content-center">
                             <div className="col-1">
                                 <a href="https://www.instagram.com/the_immigrantdream/?igshid=awwxanpb9zem" target="_blank" rel="noreferrer noopener"> <i className="fab fa-instagram"/></a>
-                                <a href="/" target="_blank" rel="noreferrer noopener"> <i className="fab fa-facebook"/></a>
+                                <a href="https://www.facebook.com/theimmigrantdream" target="_blank" rel="noreferrer noopener"> <i className="fab fa-facebook"/></a>
                             </div>
                         </div>
                         <button className='btn btn-info' style={{backgroundColor: '#0984e3'}}
