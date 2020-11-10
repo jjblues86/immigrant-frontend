@@ -3,6 +3,7 @@ import axios from 'axios';
 import Card from "../Card/Card";
 import picture from "../../../assets/business.jpeg";
 import * as ReactBootstrap from "react-bootstrap";
+import styles from "./Businesses.module.css";
 
 const config = require('../../../config.json');
 
@@ -31,11 +32,18 @@ class Businesses extends Component {
         const businessesList = businesses.length ? (
             businesses.map(business => {
                 return (
-                    <Card key={business.id}
-                          photo={picture}
-                          name={business.businessName}
-                          tag={'Business Type: ' + business.businessType}
-                          tagId={'/business/' + business.id}>
+                    <Card
+                        cardClass={styles.Card}
+                        imageClass={styles.Image}
+                        textClass={styles.Title}
+                        nameClass={styles.Name}
+                        linkClass={"Link"}
+
+                        key={business.id}
+                        photo={picture}
+                        name={business.businessName}
+                        tag={'Business Type: ' + business.businessType}
+                        tagId={'/business/' + business.id}>
                     </Card>
                 )
             })
@@ -44,7 +52,7 @@ class Businesses extends Component {
             <div className="has-text-centered">
                 <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
             </div>
-            )
+        )
         return (
             <div>
                 <div className='row mb-5'>

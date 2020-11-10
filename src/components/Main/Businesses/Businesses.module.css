@@ -50,7 +50,7 @@
     }
 }
 
-@media (min-width: 576px) and (max-width: 850px) {
+@media (min-width: 576px) and (max-width: 1050px) {
     .Card {
         width: 40%;
         margin-left: 5%;
@@ -58,7 +58,7 @@
     }
 }
 
-@media (min-width: 850px){
+@media (min-width: 1050px){
     .Card {
         width: 30%;
         margin-left: 1.666%;
@@ -67,19 +67,19 @@
 }
 
 .Image {
-    height: 48%;
+    height: 66%;
     width: 100%;
 }
 
 .Name {
-    height: 8%;
+    height: 12%;
     margin-top: 5px;
     font-weight: bolder;
     font-size: 1.2rem;
 }
 
 .Title {
-    height: 8%;
+    height: 12%;
     font-style: oblique;
     font-size: 1.1rem;
 }
@@ -100,16 +100,4 @@
     text-decoration: #00e7eb;
 }
 
-.Link {
-    height: 8%;
-    width: 100%;
-    cursor: pointer;
-    background-color: #c4d0c7;
-    color: #ffffff;
-    border: none;
-    text-decoration: none;
-}
-
-a {
-    text-decoration: none;
-}
+/* 10% for Link in index.css */

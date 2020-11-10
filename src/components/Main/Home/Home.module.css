@@ -11,3 +11,33 @@
     height: 100%;
     width: 100%;
 }
+
+/* classNames for card*/
+.Card {
+    min-width: 25%;
+    height: 300px;
+    margin: 10px 25%;
+    background-color: #f8f8f8;
+    text-align: center;
+    scroll-behavior: smooth;
+    border-radius: 5px;
+    text-decoration: none;
+    justify-content: center;
+}
+
+@media (max-width: 575.99px) {
+    .Card {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1050px) {
+    .Card {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* classes for the items in the card are in index.css */
+

@@ -1,3 +1,17 @@
 .Content {
     margin: 0 10% 0;
 }
+
+@media (max-width: 575.99px) {
+    .Content {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+}
+
+@media (min-width: 575.99px) and (max-width: 800px) {
+    .Content {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
