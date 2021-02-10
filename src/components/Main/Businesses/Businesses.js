@@ -3,7 +3,6 @@ import axios from 'axios';
 import Card from "../Card/Card";
 import picture from "../../../assets/business.jpeg";
 import * as ReactBootstrap from "react-bootstrap";
-import styles from "./Businesses.module.css";
 
 const config = require('../../../config.json');
 
@@ -33,12 +32,7 @@ class Businesses extends Component {
             businesses.map(business => {
                 return (
                     <Card
-                        cardClass={styles.Card}
-                        imageClass={styles.Image}
-                        textClass={styles.Title}
-                        nameClass={styles.Name}
                         linkClass={"Link"}
-
                         key={business.id}
                         photo={picture}
                         name={business.businessName}

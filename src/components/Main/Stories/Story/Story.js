@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
 import picture from '../../../../assets/immidream.jpeg'
 import axios from "axios";
-import style from './Story.module.css';
 import SocialShare from "./SocialShare";
 import * as ReactBootstrap from "react-bootstrap";
 
@@ -29,7 +28,7 @@ class Story extends Component {
 
     render() {
         const immigrant = this.state.immigrant ? (
-                <div className={style.Story}>
+                <div>
                     <h2 className="title is-1 has-text-centered">{this.state.immigrant.immigrantName}</h2>
                     <p className="has-text-centered">{this.state.immigrant.storyDate}</p>
                     <br/>
@@ -47,28 +46,8 @@ class Story extends Component {
                 <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
             </div>
         )
-
-        const immigrantSide = this.state.immigrant ? (
-            <aside>
-                {/*<hr/>*/}
-                <h2 className="title is-4">Origin</h2>
-                <p className="subtitle is-5">{this.state.immigrant.immigrantOrigin}</p>
-                <br/>
-                <h2 className="title is-4">Hobby</h2>
-                <p className="subtitle is-5">
-                    {this.state.immigrant.immigrantHobby}
-                </p>
-            </aside>
-
-        ) : (
-            <div className="has-text-centered">
-                <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
-            </div>
-        )
-
         return (
             <Auxiliary>
-                {immigrantSide}
                 {immigrant}
                 <SocialShare />
             </Auxiliary>

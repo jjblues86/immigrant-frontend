@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
 import picture from '../../../../assets/business.jpeg'
 import axios from "axios";
-import style from './Business.module.css';
 import * as ReactBootstrap from "react-bootstrap";
 
 const config = require('../../../../config.json');
@@ -29,7 +28,6 @@ class Business extends Component {
     render() {
         const business = this.state.business ? (
             <div border="dark"
-                  className={style.Business}
             >
                     <h2 className="title is-1 has-text-centered">{this.state.business.businessName}</h2>
                     <figure className="image is-16by9">
@@ -45,27 +43,8 @@ class Business extends Component {
                 <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
             </div>
         )
-
-        const businessSide = this.state.business ? (
-            <aside>
-                <h2 className="title is-4">Products</h2>
-                <p className="subtitle is-5">{this.state.business.businessProducts}</p>
-                <br/>
-                <h2 className="title is-4">Location</h2>
-                <p className="subtitle is-5">
-                    {this.state.business.businessLocation}
-                </p>
-            </aside>
-
-        ) : (
-            <div className="has-text-centered">
-                <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
-            </div>
-        )
-
         return (
             <Auxiliary>
-                {businessSide}
                 {business}
             </Auxiliary>
         )

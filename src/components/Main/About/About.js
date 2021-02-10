@@ -51,6 +51,7 @@ const About = () => {
             <div className="has-text-centered">
             <h3 className="title is-2 Blue">Creators</h3>
             </div>
+            <br/>
             <article className="media">
                 <figure className="media-left">
                     <p className="image is-128x128">

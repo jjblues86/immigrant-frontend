@@ -17,10 +17,10 @@ aside {
 
 @media (min-width: 448px) {
     aside {
-        width: 115.2px;
+        width: 125px;
     }
 }
-@media (min-width: 412px) {
+@media (min-width: 444px) {
     aside {
         margin-right: 12.8px;
         margin-left: 12.8px;
