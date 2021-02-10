@@ -1,10 +1,11 @@
 import React from "react";
+import immigrantImage from "../../../assets/immigrants.jpg";
 
 function Hero() {
     return (
         <img
-            className="d-block w-100"
-            src="immigrants.jpg"
+            id="immigrants-image"
+            src={immigrantImage}
             alt="Immigrants"
         />
     )
