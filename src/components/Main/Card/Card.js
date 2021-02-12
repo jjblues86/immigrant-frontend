@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import style from '../Home/Home.module.css';
 
 class Card extends Component {
     render() {
         return (
-            <section id="cards">
-                <img src={this.props.photo} alt={this.props.name}/>
-                <h1>{this.props.name}</h1>
-                <h2>{this.props.tag}</h2>
+            <section className={style.cards}>
+                <img className={style.immigrant} src={this.props.photo} alt={this.props.name}/>
+                <h1 className={style}>{this.props.name}</h1>
+                <h2 className={style.tag}>{this.props.tag}</h2>
                 <div>
                     <Link to={this.props.tagId}>
                         <p>Learn More</p>

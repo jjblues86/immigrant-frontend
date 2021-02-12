@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif, Serif;
+    margin: 0;
+}
+
+.hero {
+    width: 100%;
+    height: 520px;
+    padding: 10px;
+}
+
+.cards {
+    background: #f1f3f5;
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    border: 1px solid #dcdacb;
+    border-radius: 3px;
+    transition: linear 100ms;
+    opacity: .8;
+}
+
+.intro {
+    text-align: justify;
+    padding: 16px;
+}
+
+.immigrant {
+    width: 240px;
+    height: 135px;
+}
+
+.tag {
+    font-family: "Font Awesome\ 5 Free", sans-serif;
+    font-weight: bold;
+}
