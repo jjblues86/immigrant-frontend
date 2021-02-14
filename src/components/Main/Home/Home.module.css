@@ -8,18 +8,17 @@ body {
 }
 
 .hero {
-    width: 100%;
-    height: 520px;
-    padding: 10px;
+    width: 100vw;
+    height: 33vh;
     object-fit: cover
 }
 
 .cards {
     text-align: center;
-    padding: 2.5rem;
-    margin: 8px;
+    /*padding: 1rem; */
+    margin: 0;
     display: inline-block;
-    width: 30%;
+    width: 100%;
     vertical-align: middle;
     border: 1px solid #dcdacb;
     border-radius: 5px;
@@ -37,23 +36,54 @@ body {
     padding: 16px;
 }
 
-.immigrant {
-    width: 100%;
-    border-radius: 5px 5px 0 0;
+.name {
+    margin: 0.5rem 0;
 }
 
 .tag {
     font-family: "Font Awesome\ 5 Free", sans-serif;
     font-weight: bold;
+    margin: 0.5rem 0;
 }
 
 .button{
     background-color: #0984e3; /* Blue */
     border: none;
+    padding: 0.2rem;
     color: white;
-    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+
+.button:hover,
+.button:active {
+    background: lightskyblue;
+    color: black;
+}
+
+.button:focus {
+    outline: none;
+}
+
+@media (min-width: 40rem) {
+    .cardsList{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards{
+        width: 30%;
+        min-width: 13rem;
+        max-width: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 28rem;
+    }
 }

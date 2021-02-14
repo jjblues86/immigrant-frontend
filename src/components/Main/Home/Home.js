@@ -1,9 +1,11 @@
 import React, {Component, Fragment} from 'react';
 import axios from "axios";
 import * as ReactBootstrap from 'react-bootstrap';
-import picture from "../../../assets/Abc.png";
+import picture from "../../../assets/immidream.jpeg";
 import Card from '../Card/Card';
 import HomeContent from "./HomeContent";
+import style from "./Home.module.css";
+import styles from "../Stories/Stories.module.css";
 
 const config = require('../../../config.json');
 
@@ -30,7 +32,7 @@ class Home extends Component {
     render() {
         const {immigrants} = this.state;
         const immigrantsList = immigrants.length ?
-            <div>
+            <div className={style.cardsList}>
                     {immigrants.map(immigrant => (
                             <Card
                                 key={immigrant.id}
@@ -50,8 +52,9 @@ class Home extends Component {
         return (
             <Fragment>
                 <HomeContent/>
-                {immigrantsList}
-                <h2>Sponsors:</h2>
+                <div className={styles.cardsList}>
+                {immigrantsList }
+                </div>
             </Fragment>
         )
     }

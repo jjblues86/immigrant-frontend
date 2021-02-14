@@ -9,7 +9,7 @@ const layout = (props) => {
         <Auxiliary>
             <Toolbar/>
             <br/>
-            <main className={styles.Content}>
+            <main>
                 {props.children}
             </main>
             <FooterItems/>
