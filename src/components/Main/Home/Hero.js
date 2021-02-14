@@ -1,10 +1,10 @@
 import React from "react";
 import immigrantImage from "../../../assets/immigrants.jpg";
+import style from './Home.module.css'
 
 function Hero() {
     return (
-        <img
-            id="immigrants-image"
+        <img className={style.hero}
             src={immigrantImage}
             alt="Immigrants"
         />

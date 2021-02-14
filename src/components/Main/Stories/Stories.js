@@ -34,11 +34,12 @@ class Stories extends Component {
             (immigrants.map(immigrant => {
                 return (
                     <Card
-                        cardClass={styles.Card}
-                        imageClass={"Image"}
-                        nameClass={"Name"}
-                        textClass={"Title"}
-                        linkClass={"Link"}
+
+                        cardClass={styles.StoriesCard}
+                        // imageClass={"Image"}
+                        // nameClass={"Name"}
+                        // textClass={"Title"}
+                        // linkClass={"Link"}
 
                         key={immigrant.id}
                         photo={picture}
@@ -53,7 +54,10 @@ class Stories extends Component {
                 </div>
             )
         return (
+
             <div>
+                <h1 className={styles.Stories}>The Immigrant Stories</h1>
+                <hr className={styles.Divider}/>
                 <div className="row">
                     {immigrantsList}
                 </div>

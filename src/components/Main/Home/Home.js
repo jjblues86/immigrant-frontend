@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import axios from "axios";
 import * as ReactBootstrap from 'react-bootstrap';
+import picture from "../../../assets/Abc.png";
 import Card from '../Card/Card';
 import HomeContent from "./HomeContent";
 
@@ -33,7 +34,7 @@ class Home extends Component {
                     {immigrants.map(immigrant => (
                             <Card
                                 key={immigrant.id}
-                                // photo={picture}
+                                photo={picture}
                                 name={immigrant.immigrantName}
                                 tag={immigrant.storyTitle}
                                 tagId={'/story/' + immigrant.id}>
@@ -49,9 +50,8 @@ class Home extends Component {
         return (
             <Fragment>
                 <HomeContent/>
-                <div style={{margin: "auto"}}>
-                    {immigrantsList}
-                </div>
+                {immigrantsList}
+                <h2>Sponsors:</h2>
             </Fragment>
         )
     }

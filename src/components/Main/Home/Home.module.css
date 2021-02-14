@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif, Serif;
+    margin: 0;
+}
+
+.hero {
+    width: 100%;
+    height: 520px;
+    padding: 10px;
+    object-fit: cover
+}
+
+.cards {
+    text-align: center;
+    padding: 2.5rem;
+    margin: 8px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    border: 1px solid #dcdacb;
+    border-radius: 5px;
+    transition: linear 100ms;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    opacity: .8;
+}
+
+.cards:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.intro {
+    text-align: justify;
+    padding: 16px;
+}
+
+.immigrant {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.tag {
+    font-family: "Font Awesome\ 5 Free", sans-serif;
+    font-weight: bold;
+}
+
+.button{
+    background-color: #0984e3; /* Blue */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}

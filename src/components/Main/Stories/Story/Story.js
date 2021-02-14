@@ -4,6 +4,7 @@ import picture from '../../../../assets/immidream.jpeg'
 import axios from "axios";
 import SocialShare from "./SocialShare";
 import * as ReactBootstrap from "react-bootstrap";
+import styles from "./Story.module.css"
 
 const config = require('../../../../config.json');
 
