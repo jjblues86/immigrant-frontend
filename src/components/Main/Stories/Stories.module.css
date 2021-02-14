@@ -1,0 +1,27 @@
+.Stories {
+    text-align: center;
+    font-family: "Font Awesome\ 5 Free", sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    padding: 1rem;
+}
+
+.Divider{
+    width: 2.5rem;
+    margin: auto;
+    background: black;
+}
+
+.StoriesCard {
+    background: #f1f3f5;
+    text-align: center;
+    padding: 2.5rem;
+    margin: 8px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    border: 1px solid #dcdacb;
+    border-radius: 3px;
+    transition: linear 100ms;
+    opacity: .8;
+}

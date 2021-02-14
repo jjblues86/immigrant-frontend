@@ -51,6 +51,7 @@ class Home extends Component {
             <Fragment>
                 <HomeContent/>
                 {immigrantsList}
+                <h2>Sponsors:</h2>
             </Fragment>
         )
     }
