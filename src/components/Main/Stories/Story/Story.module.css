@@ -3,16 +3,8 @@
     margin: auto;
 }
 
-aside {
-    float: right;
-    width: 50px;
-    text-align: center;
-    font-size: 20px;
-    padding: 20px 25px;
-    height: 67vh;
-    margin-bottom: 15px;
-    top: 5%;
-    position: relative;
+.Social {
+    vertical-align: middle;
 }
 
 @media (min-width: 448px) {

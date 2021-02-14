@@ -11,7 +11,7 @@ import {
 const SocialShare = (props) => {
 
     return (
-        <div className={style.Social}>
+        <section className={style.Social}>
             <LinkedinShareButton
                 url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
@@ -29,7 +29,7 @@ const SocialShare = (props) => {
                 hashtag="#theimmigrantdream">
                 <TwitterIcon size={32} round={true}/>
             </TwitterShareButton>
-        </div>
+        </section>
     );
 }
 
