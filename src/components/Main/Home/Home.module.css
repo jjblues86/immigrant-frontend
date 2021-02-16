@@ -16,7 +16,7 @@ body {
 .cards {
     text-align: center;
     /*padding: 1rem; */
-    margin: 0;
+    margin: 1rem;
     display: inline-block;
     width: 100%;
     vertical-align: middle;
