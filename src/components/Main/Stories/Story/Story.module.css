@@ -4,12 +4,14 @@
 }
 
 .Social {
-    vertical-align: middle;
+    /*vertical-align: middle;*/
+    place-items: center;
 }
 
 @media (min-width: 448px) {
     aside {
         width: 125px;
+        margin: auto;
     }
 }
 @media (min-width: 444px) {
