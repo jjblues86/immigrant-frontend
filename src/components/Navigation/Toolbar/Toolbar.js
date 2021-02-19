@@ -4,7 +4,6 @@ import Nav from "react-bootstrap/Nav";
 import NavigationItem from "../NavigationItem/NavigationItem";
 import Logo from "../Logo/Logo";
 import styles from "./Toolbar.module.css";
-import logoImage from "../../../assets/immigrant.png";
 import logo from "../../../assets/logo.png"
 import {withRouter} from 'react-router-dom';
 
