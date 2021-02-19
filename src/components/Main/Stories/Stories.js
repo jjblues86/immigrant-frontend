@@ -35,12 +35,7 @@ class Stories extends Component {
                 return (
                     <Card
 
-                        cardClass={styles.StoriesCard}
-                        // imageClass={"Image"}
-                        // nameClass={"Name"}
-                        // textClass={"Title"}
-                        // linkClass={"Link"}
-
+                        cardClass={styles.cardsList}
                         key={immigrant.id}
                         photo={picture}
                         name={immigrant.immigrantName}
@@ -56,9 +51,11 @@ class Stories extends Component {
         return (
 
             <div>
-                <h1 className={styles.Stories}>The Immigrant Stories</h1>
-                <hr className={styles.Divider}/>
-                <div className="row">
+                <div className={styles.storiesDivider}>
+                    <h1 className={styles.Stories}>The Immigrant Stories</h1>
+                    <hr className={styles.Divider}/>
+                </div>
+                <div className={styles.cardsList}>
                     {immigrantsList}
                 </div>
             </div>
