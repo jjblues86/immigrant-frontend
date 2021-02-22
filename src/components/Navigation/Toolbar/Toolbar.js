@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import NavigationItem from "../NavigationItem/NavigationItem";
 import Logo from "../Logo/Logo";
 import styles from "./Toolbar.module.css";
-import logoImage from "../../../assets/immigrant.png";
+import logo from "../../../assets/logo.png"
 import {withRouter} from 'react-router-dom';
 
 class Toolbar extends Component {
@@ -16,7 +16,7 @@ class Toolbar extends Component {
         return (
             <Navbar className={styles.NavFont} expand="md" sticky="top">
                 <Navbar.Brand className={styles.Logo} onClick={this.homePage}>
-                    <Logo picture={logoImage} className={styles.Logo} alternate='Logo'/>
+                    <Logo picture={logo} className={styles.Logo} alternate='Logo'/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav" className={styles.Right}>

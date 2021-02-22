@@ -9,7 +9,7 @@ const layout = (props) => {
         <Auxiliary>
             <Toolbar/>
             <br/>
-            <main>
+            <main className={styles.MinHeight}>
                 {props.children}
             </main>
             <FooterItems/>
