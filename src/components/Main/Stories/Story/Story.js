@@ -4,6 +4,7 @@ import picture from '../../../../assets/immidream.jpeg'
 import axios from "axios";
 import SocialShare from "./SocialShare";
 import * as ReactBootstrap from "react-bootstrap";
+import style from './Story.module.css';
 
 const config = require('../../../../config.json');
 
@@ -28,18 +29,16 @@ class Story extends Component {
 
     render() {
         const immigrant = this.state.immigrant ? (
-                <div>
-                    <h2 className="title is-1 has-text-centered">{this.state.immigrant.immigrantName}</h2>
-                    <p className="has-text-centered">{this.state.immigrant.storyDate}</p>
-                    <br/>
-                    <figure className="image is-16by9">
-                    <img src={picture} alt={this.state.immigrant.immigrantName}/>
-                </figure>
-                <br/>
-                    <p className="has-text-black-bis has-text-justified has-text-weight-normal">
-                        {this.state.immigrant.immigrantStory}
-                    </p>
+            <div>
+                <div className={style.Container}>
+                    <div className={style.Image}>
+                        <img src={picture} alt={this.state.immigrant.immigrantName}/>
+                    </div>
+                    <div className={style.Name}>{this.state.immigrant.immigrantName}</div>
+                    <div className={style.StoryDate}>{this.state.immigrant.storyDate}</div>
+                    <p className={style.StoryText}>{this.state.immigrant.immigrantStory}</p>
                 </div>
+            </div>
 
         ) : (
             <div className="has-text-centered">
@@ -53,6 +52,6 @@ class Story extends Component {
             </Auxiliary>
         )
     }
-};
+}
 
 export default Story;

@@ -20,3 +20,62 @@
         margin-left: 12.8px;
     }
 }
+
+.Container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20rem 2rem 2rem auto;
+}
+
+.Name {
+    text-align: center;
+    margin: 0;
+}
+
+.StoryDate {
+    text-align: center;
+    margin: 0;
+}
+
+.StoryText {
+    padding: 0 2px;
+}
+
+.Image {
+}
+
+@media (min-width: 40rem) {
+    .Container{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 1fr 2fr 1fr 2fr 1fr 2fr 2fr 2fr 2fr auto;
+    }
+
+    .Image {
+        grid-column-start: 1;
+        grid-column-end: span 1;
+        grid-row-start: 1;
+        grid-row-end: span 5;
+    }
+
+    .Name {
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start: 2;
+        grid-row-end: span 1;
+    }
+
+    .StoryDate {
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start: 4;
+        grid-row-end: span 5;
+    }
+
+    .StoryText {
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        grid-row-start: 5;
+        grid-row-end: span 5;
+    }
+}
