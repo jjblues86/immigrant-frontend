@@ -11,18 +11,14 @@ class FooterItems extends Component {
     render() {
         return (
             <footer className='footer'>
-                <div className="content has-text-centered">
-                    <div className={style.FontAwesome}>
-                        <div className="row justify-content-center">
-                            <div className="col-1">
-                                <a href="https://www.instagram.com/the_immigrantdream/?igshid=awwxanpb9zem" target="_blank" rel="noreferrer noopener"> <i className="fab fa-instagram"/></a>
-                                <a href="https://www.facebook.com/theimmigrantdream" target="_blank" rel="noreferrer noopener"> <i className="fab fa-facebook"/></a>
-                            </div>
-                        </div>
-                        <button className='btn btn-info' style={{backgroundColor: '#0984e3'}}
-                                onClick={this.contactUsHandler}>Contact Us
-                        </button>
+                <div className={style.FontAwesome}>
+                    <div className={style.SocialContents}>
+                        <a href="https://www.instagram.com/the_immigrantdream/?igshid=awwxanpb9zem" target="_blank" rel="noreferrer noopener"> <i className={[style.SocialContent,"fab fa-instagram"].join(" ")}/></a>
+                        <a href="https://www.facebook.com/theimmigrantdream" target="_blank" rel="noreferrer noopener"> <i className={[style.SocialContent,"fab fa-facebook"].join(" ")}/></a>
                     </div>
+                    <button className='btn btn-info' style={{backgroundColor: '#0984e3'}}
+                            onClick={this.contactUsHandler}>Contact Us
+                    </button>
                 </div>
                 <div className="footer-bottom has-text-centered">
                     <p className="text-xs-center">
