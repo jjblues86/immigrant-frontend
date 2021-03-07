@@ -24,18 +24,17 @@ class Story extends Component {
                     immigrant: res.data
                 });
             });
-
     }
 
     render() {
         const immigrant = this.state.immigrant ? (
             <div>
                 <div className={style.Container}>
-                    <div className={style.Image}>
-                        <img src={picture} alt={this.state.immigrant.immigrantName}/>
+                    <div className={style.ImageContainer}>
+                        <img src={picture} alt={this.state.immigrant.immigrantName} className={style.Image}/>
                     </div>
-                    <div className={style.Name}>{this.state.immigrant.immigrantName}</div>
-                    <div className={style.StoryDate}>{this.state.immigrant.storyDate}</div>
+                    <h2 className={style.Name}>{this.state.immigrant.immigrantName}</h2>
+                    <h3 className={style.StoryDate}>{this.state.immigrant.storyDate}</h3>
                     <p className={style.StoryText}>{this.state.immigrant.immigrantStory}</p>
                 </div>
             </div>
