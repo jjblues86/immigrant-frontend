@@ -2,11 +2,9 @@ import React from "react";
 import style from './Story.module.css'
 
 import {
-    FacebookShareButton, TwitterShareButton, LinkedinShareButton
+    FacebookShareButton, TwitterShareButton, LinkedinShareButton, LinkedinIcon, FacebookIcon, TwitterIcon,
 } from "react-share";
-import {
-    LinkedinIcon, FacebookIcon, TwitterIcon,
-} from "react-share";
+
 
 const SocialShare = () => {
 
