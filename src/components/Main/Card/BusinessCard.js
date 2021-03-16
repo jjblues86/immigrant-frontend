@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from "react-router-dom";
-import style from '../Home/Home.module.css';
 import styles from '../../../components/Main/Businesses/Businesses.module.css';
 
 class BusinessCard extends Component {
