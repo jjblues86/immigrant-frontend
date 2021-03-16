@@ -8,8 +8,7 @@ const layout = (props) => {
     return (
         <Auxiliary>
             <Toolbar/>
-            <br/>
-            <main>
+            <main className={styles.MinHeight}>
                 {props.children}
             </main>
             <FooterItems/>

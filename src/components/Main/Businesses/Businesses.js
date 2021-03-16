@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import BusinessCard from "../Card/BusinessCard";
 import Card from "../Card/Card";
 import picture from "../../../assets/business.jpeg";
 import * as ReactBootstrap from "react-bootstrap";
@@ -31,14 +32,14 @@ class Businesses extends Component {
         const businessesList = businesses.length ? (
             businesses.map(business => {
                 return (
-                    <Card
+                    <BusinessCard
                         linkClass={"Link"}
                         key={business.id}
                         photo={picture}
                         name={business.businessName}
                         tag={'Business Type: ' + business.businessType}
                         tagId={'/business/' + business.id}>
-                    </Card>
+                    </BusinessCard>
                 )
             })
 
@@ -49,7 +50,7 @@ class Businesses extends Component {
         )
         return (
             <div>
-                <div className='row mb-5'>
+                <div>
                     {businessesList}
                 </div>
             </div>
