@@ -72,7 +72,7 @@ class ContactMe extends Component {
                         className='col-lg-6 col-md-8 col-sm-12 m-auto'
                         style={{alignContent: "center"}}>
                         <p className={style.Intro}>
-                            <strong>Please fill out the form below for further inquiry</strong>
+                            <strong>Contact us by filling out the form below</strong>
                         </p>
                         <br/>
                         <div className='form-group'>

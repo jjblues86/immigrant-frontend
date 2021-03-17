@@ -2,34 +2,32 @@ import React from "react";
 import style from './Story.module.css'
 
 import {
-    FacebookShareButton, TwitterShareButton, LinkedinShareButton
-} from "react-share";
-import {
-    LinkedinIcon, FacebookIcon, TwitterIcon,
+    FacebookShareButton, TwitterShareButton, LinkedinShareButton, LinkedinIcon, FacebookIcon, TwitterIcon,
 } from "react-share";
 
-const SocialShare = (props) => {
+
+const SocialShare = () => {
 
     return (
-        <section className={style.Social}>
-            <LinkedinShareButton
+        <div className={style.SocialContents}>
+            <LinkedinShareButton className={style.SocialContent}
                 url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
                 <LinkedinIcon size={32} round={true}/>
             </LinkedinShareButton>
 
-            <FacebookShareButton
+            <FacebookShareButton className={style.SocialContent}
                 url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
                 <FacebookIcon size={32} round={true}/>
             </FacebookShareButton>
 
-            <TwitterShareButton
+            <TwitterShareButton className={style.SocialContent}
                 url={"http://theimmigrantdream.com/story/"}
                 hashtag="#theimmigrantdream">
                 <TwitterIcon size={32} round={true}/>
             </TwitterShareButton>
-        </section>
+        </div>
     );
 }
 
