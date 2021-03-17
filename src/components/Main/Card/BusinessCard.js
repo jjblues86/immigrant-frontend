@@ -8,6 +8,9 @@ class BusinessCard extends Component {
             <div className={styles.card}>
                 <div className={styles.cardImage}>
                 <img src={this.props.photo} alt={this.props.name} />
+                    <div className={styles.overlay}>
+                        <div className={styles.text}>{this.props.name}</div>
+                    </div>
                 </div>
                 <div className={styles.cardContent}>
                 <h1 className={styles.cardTitle}>{this.props.name}</h1>
