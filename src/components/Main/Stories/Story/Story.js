@@ -28,14 +28,16 @@ class Story extends Component {
 
     render() {
         const immigrant = this.state.immigrant ? (
-            <div>
+            <div className={style.Story}>
                 <div className={style.Container}>
                     <div className={style.ImageContainer}>
-                        <img src={picture} alt={this.state.immigrant.immigrantName} className={style.Image}/>
+                        <img src={picture} alt={this.state.immigrant.name} className={style.Image}/>
                     </div>
-                    <h2 className={style.Name}>{this.state.immigrant.immigrantName}</h2>
-                    <h3 className={style.StoryDate}>{this.state.immigrant.storyDate}</h3>
-                    <p className={style.StoryText}>{this.state.immigrant.immigrantStory}</p>
+                    <h2 className={style.Name}>{this.state.immigrant.name}</h2>
+                    <h3 className={style.Profession}>{this.state.immigrant.profession}</h3>
+                    <h3 className={style.Origin}>{this.state.immigrant.origin}</h3>
+                    <h3 className={style.Hobby}>{this.state.immigrant.hobby}</h3>
+                    <p className={style.StoryText}>{this.state.immigrant.story}</p>
                 </div>
             </div>
 
