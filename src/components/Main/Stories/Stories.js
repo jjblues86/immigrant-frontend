@@ -38,8 +38,8 @@ class Stories extends Component {
                         cardClass={styles.cardsList}
                         key={immigrant.id}
                         photo={picture}
-                        name={immigrant.immigrantName}
-                        tag={immigrant.storyTitle}
+                        name={immigrant.firstName+" "+immigrant.lastName}
+                        tag={immigrant.profession}
                         tagId={'/story/' + immigrant.id}
                     />
                 )
