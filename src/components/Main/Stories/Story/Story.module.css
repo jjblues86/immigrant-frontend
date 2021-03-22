@@ -52,7 +52,17 @@
     padding-top: 5px;
 }
 
-.StoryDate {
+.Profession {
+    text-align: center;
+    margin: 0;
+}
+
+.Origin {
+    text-align: center;
+    margin: 0;
+}
+
+.Hobby {
     text-align: center;
     margin: 0;
 }
@@ -65,18 +75,22 @@
 
 
 @media (min-width: 40rem) {
+    .Story{
+        min-width: 80rem;
+        margin: auto;
+    }
     .Container{
         margin: auto 10rem;
         display: grid;
         grid-template-columns: 60% 40%;
-        grid-template-rows: 1fr 2fr 1fr 2fr 0.2fr 1fr 2fr 2fr 2fr 2fr auto;
+        grid-template-rows: 1rem 2rem 1rem 2rem 1rem 2rem 1rem 2rem 1rem 2rem auto; /*name profession hobby origin */
     }
 
     .ImageContainer {
         grid-column-start: 1;
         grid-column-end: span 1;
         grid-row-start: 1;
-        grid-row-end: span 5;
+        grid-row-end: span 9;
     }
 
     .Name {
@@ -88,19 +102,37 @@
         grid-row-end: span 1;
     }
 
-    .StoryDate {
+    .Profession {
         text-align: left;
         margin: 0 1rem;
         grid-column-start: 2;
         grid-column-end: span 1;
         grid-row-start: 4;
-        grid-row-end: span 5;
+        grid-row-end: span 1;
+    }
+
+    .Origin {
+        text-align: left;
+        margin: 0 1rem;
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start: 6;
+        grid-row-end: span 1;
+    }
+
+    .Hobby {
+        text-align: left;
+        margin: 0 1rem;
+        grid-column-start: 2;
+        grid-column-end: span 1;
+        grid-row-start: 8;
+        grid-row-end: span 1;
     }
 
     .StoryText {
         grid-column-start: 1;
         grid-column-end: span 2;
-        grid-row-start: 7;
+        grid-row-start: 11;
         grid-row-end: -1;
     }
 }
