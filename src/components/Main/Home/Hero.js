@@ -4,7 +4,7 @@ import style from './Home.module.css'
 
 function Hero() {
     return (
-        <img className={style.hero}
+        <img className={style.Hero}
             src={immigrantImage}
             alt="Immigrants"
         />
