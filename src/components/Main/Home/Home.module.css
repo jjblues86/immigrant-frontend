@@ -7,46 +7,6 @@ body {
     margin: 0;
 }
 
-.Hero {
-    width: 100vw;
-    height: 33vh;
-    object-fit: cover
-}
-
-.cards {
-    text-align: center;
-    margin: 1rem;
-    display: inline-block;
-    width: 100%;
-    vertical-align: middle;
-    border: 1px solid #dcdacb;
-    border-radius: 5px;
-    transition: linear 100ms;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    opacity: .8;
-    cursor: pointer;
-}
-
-.cards:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.Intro {
-    text-align: justify;
-    box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
-    padding: 0 1px;
-}
-
-.name {
-    margin: 0.5rem 0;
-}
-
-.tag {
-    font-family: "Font Awesome\ 5 Free", sans-serif;
-    font-weight: bold;
-    margin: 0.5rem 0;
-}
-
 .button {
     background-color: #0984e3;
     border: none;
@@ -68,6 +28,52 @@ body {
 
 .button:focus {
     outline: none;
+}
+
+.name {
+    margin: 0.5rem 0;
+}
+
+.tag {
+    font-family: "Font Awesome\ 5 Free", sans-serif;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.cards {
+    text-align: center;
+    margin: 1rem;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    border: 1px solid #dcdacb;
+    border-radius: 5px;
+    transition: linear 100ms;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    opacity: .8;
+    cursor: pointer;
+}
+
+.cards:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Hero {
+    width: 100vw;
+    height: 33vh;
+    object-fit: cover
+}
+
+.Intro {
+    text-align: justify;
+    box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
+    padding: 0 0.5rem;
+}
+
+.CardsList {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0 0.5rem;
 }
 
 @media (min-width: 40rem) {
