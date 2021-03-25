@@ -7,124 +7,90 @@ body {
     margin: 0;
 }
 
-.button {
-    background-color: #0984e3;
-    border: none;
-    padding: 0.2rem;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 3px;
-    cursor: pointer;
-    margin: 0.5rem 0;
-}
-
-.button:hover,
-.button:active {
-    background: lightskyblue;
-    color: black;
-}
-
-.button:focus {
-    outline: none;
-}
-
-.name {
-    margin: 0.5rem 0;
-}
-
-.tag {
-    font-family: "Font Awesome\ 5 Free", sans-serif;
-    font-weight: bold;
-    margin: 0.5rem 0;
-}
-
-.cards {
-    text-align: center;
-    margin: 1rem;
-    display: inline-block;
-    width: 100%;
-    vertical-align: middle;
-    border: 1px solid #dcdacb;
-    border-radius: 5px;
-    transition: linear 100ms;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    opacity: .8;
-    cursor: pointer;
-}
-
-.cards:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
 .Hero {
     width: 100vw;
     height: 33vh;
     object-fit: cover
 }
 
-.Intro {
-    text-align: justify;
-    box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
-    padding: 0 0.5rem;
-}
-
-.HomeContentStoriesContainer{
+.HomeContentStoriesContainer {
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
     margin: 0;
 }
 
-.HomeContent{
-    grid-column-start: 1;
-    grid-column-end: span 1;
-    grid-row-start: 1;
-    grid-row-end: span 1;
-    padding: 0 0.5rem;
+.HomeContent {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding: 1rem 0.5rem;
     text-align: justify;
     box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
 }
 
-.Stories{
-    grid-column-start: 1;
-    grid-column-end: span 1;
-    grid-row-start: 2;
-    grid-row-end: span 1;
+.Stories {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
     padding-right: 2rem;
     text-align: justify;
     box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
 }
 
 .Card {
-    margin: 0 0;
+    margin: 0;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-@media (min-width: 40rem) {
-    .HomeContentStoriesContainer{
+@media (min-width: 48rem) and (max-width: 64rem) {
+    .HomeContentStoriesContainer {
         grid-template-columns: 100%;
         grid-template-rows: auto auto;
-        margin: 0 5rem;
+        padding: 0 0.5rem;
+        margin: 0;
     }
 
-    .HomeContent{
-        grid-column-start: 1;
-        grid-column-end: span 1;
-        grid-row-start: 1;
-        grid-row-end: span 1;
-        padding: 0 0.5rem;
+    .HomeContent {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        padding: 1rem 0.5rem;
         text-align: justify;
         box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
     }
 
-    .Stories{
-        grid-column-start: 1;
-        grid-column-end: span 1;
-        grid-row-start: 2;
-        grid-row-end: span 1;
+    .Stories {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .Card {
+        margin: 0;
+        align-content: center;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 64.1rem) {
+    .HomeContentStoriesContainer {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        margin: 0 8rem;
+    }
+
+    .HomeContent {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        padding: 1rem 0.5rem;
+        text-align: justify;
+        box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
+    }
+
+    .Stories {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
         display: flex;
         width: inherit;
         justify-content: center;
@@ -132,7 +98,7 @@ body {
     }
 
     .Card {
-        margin: 0 0;
+        margin: 0;
         align-content: center;
         flex-direction: row;
     }
