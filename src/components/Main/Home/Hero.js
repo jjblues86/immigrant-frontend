@@ -1,14 +1,15 @@
-import React from "react";
+import React , {Component} from "react";
 import immigrantImage from "../../../assets/immigrants.jpg";
-import style from './Home.module.css'
+import classNames from "classnames";
 
-function Hero() {
-    return (
-        <img className={style.Hero}
-            src={immigrantImage}
-            alt="Immigrants"
-        />
-    )
+export default class Hero extends Component{
+    render() {
+        const hero = classNames(this.props.heroClass)
+        return (
+            <img className={hero}
+                 src={immigrantImage}
+                 alt="Immigrants"
+            />
+        )
+    }
 }
-
-export default Hero;
