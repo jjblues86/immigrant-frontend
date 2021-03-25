@@ -34,11 +34,10 @@ class Stories extends Component {
             (immigrants.map(immigrant => {
                 return (
                     <Card
-
                         cardClass={styles.cardsList}
                         key={immigrant.id}
                         photo={picture}
-                        name={immigrant.firstName+" "+immigrant.lastName}
+                        name={immigrant.firstName + " " + immigrant.lastName}
                         tag={immigrant.profession}
                         tagId={'/story/' + immigrant.id}
                     />

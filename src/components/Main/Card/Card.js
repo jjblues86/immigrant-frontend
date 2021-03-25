@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link, withRouter} from "react-router-dom";
-import style from '../Home/Home.module.css';
+import style from './Card.module.css';
 
 class Card extends Component {
 
@@ -9,6 +9,7 @@ class Card extends Component {
     }
 
     render() {
+
         return (
             <section onClick={this.storyData} className={style.cards}>
                 <img src={this.props.photo} alt={this.props.name}/>

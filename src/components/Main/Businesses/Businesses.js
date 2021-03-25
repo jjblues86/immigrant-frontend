@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import BusinessCard from "../Card/BusinessCard";
-import Card from "../Card/Card";
 import picture from "../../../assets/business.jpeg";
 import * as ReactBootstrap from "react-bootstrap";
 
