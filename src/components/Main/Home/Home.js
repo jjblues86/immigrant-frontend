@@ -1,10 +1,11 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import axios from "axios";
 import * as ReactBootstrap from 'react-bootstrap';
 import picture from "../../../assets/immidream.jpeg";
 import Card from '../Card/Card';
 import HomeContent from "./HomeContent";
 import style from "./Home.module.css";
+import Hero from "./Hero";
 
 const config = require('../../../config.json');
 
@@ -18,7 +19,7 @@ class Home extends Component {
         //then set them in state
         try {
             const res = await axios.get(`${config.api.storiesUrl}/immigrant`);
-            this.setState({immigrants: res.data.slice(0, 3)});
+            this.setState({immigrants: this.randomThreeStories(res.data, 3)});
         } catch (err) {
             console.log(`An error has occured: ${err}`);
         }
@@ -28,17 +29,29 @@ class Home extends Component {
         this.getImmigrants();
     }
 
+    randomThreeStories = (immigrants, n) => {
+        let len = immigrants.length,
+            result = new Array(n),
+            taken = new Array(len);
+        while (n--) {
+            let x = Math.floor(Math.random() * len);
+            result[n] = immigrants[x in taken ? taken[x] : x];
+            taken[x] = --len in taken ? taken[len] : len;
+        }
+        return result;
+    }
+
     render() {
         const {immigrants} = this.state;
         const immigrantsList = immigrants.length ?
-            <div className={style.CardsList}>
+            <div className={style.Stories}>
                 {immigrants.map(immigrant => (
-                        <Card
-                            key={immigrant.id}
-                            photo={picture}
-                            name={immigrant.firstName + " " + immigrant.lastName}
-                            tag={immigrant.quote}
-                            tagId={'/story/' + immigrant.id}>
+                        <Card className={style.Card}
+                              key={immigrant.id}
+                              photo={picture}
+                              name={immigrant.firstName + " " + immigrant.lastName}
+                              tag={immigrant.quote}
+                              tagId={'/story/' + immigrant.id}>
                         </Card>
                     )
                 )}
@@ -49,12 +62,13 @@ class Home extends Component {
                 </div>
             )
         return (
-            <Fragment>
-                <HomeContent/>
-                <div className={style.Cards3}>
+            <div>
+                <Hero heroClass={style.Hero}/>
+                <div className={style.HomeContentStoriesContainer}>
+                    <HomeContent introClass={style.HomeContent}/>
                     {immigrantsList}
                 </div>
-            </Fragment>
+            </div>
         )
     }
 }
