@@ -36,8 +36,8 @@ class Story extends Component {
                     <div className={style.Detail}>
                         <h2 className={style.Name}>{this.state.immigrant.name}</h2>
                         <h3 className={style.Profession}>{this.state.immigrant.profession}</h3>
-                        <h3 className={style.Origin}>{this.state.immigrant.origin}</h3>
-                        <h3 className={style.Hobby}>{this.state.immigrant.hobby}</h3>
+                        <h3 className={style.Origin}>{"Country of origin: " + this.state.immigrant.origin}</h3>
+                        <h3 className={style.Hobby}>{"Hobby: " + this.state.immigrant.hobby}</h3>
                     </div>
                 </div>
                 <div className={style.Text}>
@@ -53,7 +53,7 @@ class Story extends Component {
         return (
             <Auxiliary>
                 {immigrant}
-                <SocialShare />
+                <SocialShare/>
             </Auxiliary>
         )
     }

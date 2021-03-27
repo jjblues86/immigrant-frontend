@@ -1,5 +1,51 @@
-.Resources {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5em;
+.ResourcesContainer {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    margin: 1rem 0.5rem;
 }
+
+.Resources {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding: 1rem 0.5rem;
+    text-align: justify;
+    box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
+    margin: 1rem 0;
+    min-height: 5rem;
+    background: #faf6f6;
+}
+
+.Header {
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 48rem) and (max-width: 64rem) {
+    .Left {
+        margin-right: 4rem;
+        text-align: left;
+    }
+
+    .Right {
+        margin-left: 4rem;
+        text-align: right;
+    }
+}
+
+@media (min-width: 65rem) {
+    .Left {
+        margin-right: 4rem;
+        text-align: left;
+    }
+
+    .Right {
+        margin-left: 4rem;
+        text-align: right;
+    }
+}
+
