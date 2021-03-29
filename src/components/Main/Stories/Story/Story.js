@@ -53,7 +53,7 @@ class Story extends Component {
         return (
             <Auxiliary>
                 {immigrant}
-                <SocialShare />
+                <SocialShare/>
             </Auxiliary>
         )
     }
