@@ -35,9 +35,9 @@ class Story extends Component {
                     </div>
                     <div className={style.Detail}>
                         <h2 className={style.Name}>{this.state.immigrant.name}</h2>
-                        <h3 className={style.Profession}>{this.state.immigrant.profession}</h3>
-                        <h3 className={style.Origin}>{this.state.immigrant.origin}</h3>
-                        <h3 className={style.Hobby}>{this.state.immigrant.hobby}</h3>
+                        <h3 className={style.Origin}>{'Origin: ' + this.state.immigrant.origin}</h3>
+                        <h3 className={style.Hobby}>{'Hobby: ' + this.state.immigrant.hobby}</h3>
+                        <h3 className={style.Profession}>{'Profession: ' + this.state.immigrant.profession}</h3>
                     </div>
                 </div>
                 <div className={style.Text}>
