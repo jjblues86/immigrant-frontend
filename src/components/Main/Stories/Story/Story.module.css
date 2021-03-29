@@ -6,6 +6,10 @@
     grid-template-rows: 24rem auto;
 }
 
+h2, h3 {
+    font-family: 'Syne Mono', monospace;
+}
+
 .ImageAndDetailContainer {
     display: grid;
     grid-column: 1 / span 1;
