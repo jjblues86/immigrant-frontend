@@ -24,7 +24,6 @@ body {
     grid-row: 1 / span 1;
     padding: 1rem 0.5rem;
     text-align: justify;
-    box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
 }
 
 .Stories {
@@ -55,7 +54,6 @@ body {
         grid-row: 1 / span 1;
         padding: 1rem 0.5rem;
         text-align: justify;
-        box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
     }
 
     .Stories {
@@ -85,7 +83,6 @@ body {
         grid-row: 1 / span 1;
         padding: 1rem 0.5rem;
         text-align: justify;
-        box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
     }
 
     .Stories {

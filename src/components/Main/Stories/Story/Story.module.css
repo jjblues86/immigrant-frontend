@@ -1,9 +1,7 @@
 .MainContainer {
     display: grid;
     box-sizing: border-box;
-    box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
     border-radius: 4px;
-    background: #fafafe;
     grid-template-columns: 100%;
     grid-template-rows: 24rem auto;
 }
@@ -83,7 +81,6 @@
 }
 
 .StoryText {
-    padding: 0 0.5rem;
     text-align: justify;
 }
 
@@ -143,12 +140,10 @@
         display: grid;
         min-width: 60rem;
         box-sizing: border-box;
-        box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
         border-radius: 4px;
         margin: auto 10rem;
         grid-template-columns: 100%;
         grid-template-rows: 25rem auto;
-        background: #fafafe;
     }
 
     .ImageAndDetailContainer {
