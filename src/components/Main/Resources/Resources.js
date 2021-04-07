@@ -22,7 +22,6 @@ const resources = () => {
                 <div className={[style.Resources, style.Left].join(" ")}>
                     <a href="https://vote.gov/" target="_blank" rel="noreferrer noopener"><p>REGISTER TO VOTE</p></a>
                 </div>
-                <img src="../H" />
             </div>
         </div>
     )
