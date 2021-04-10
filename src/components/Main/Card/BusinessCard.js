@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styles from '../../../components/Main/Businesses/Businesses.module.css';
+import {withRouter} from "react-router-dom";
 
 class BusinessCard extends Component {
     render() {
@@ -15,18 +16,12 @@ class BusinessCard extends Component {
                 <div className={styles.cardContent}>
                 <h1 className={styles.cardTitle}>{this.props.name}</h1>
                 <h2 className={styles.cardDescription}>{this.props.tag}</h2>
+                    <a href={this.props.web} target="_blank" rel="noreferrer noopener"><h2 className={styles.cardDescription}>{this.props.web}</h2></a>
+                <h2 className={styles.cardDescription}>{this.props.add}</h2>
                 </div>
-                {/*<div className={styles.cardButton}>*/}
-                {/*    <Link to={this.props.tagId}>*/}
-                {/*        <button className={style.button} type="button">*/}
-                {/*            <p>Learn More</p>*/}
-                {/*        </button>*/}
-                {/*    </Link>*/}
-                {/*</div>*/}
             </div>
             </section>
         );
     }
 }
-
-export default BusinessCard;
+export default withRouter(BusinessCard);

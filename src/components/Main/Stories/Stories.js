@@ -18,12 +18,24 @@ class Stories extends Component {
         try {
             const res = await axios.get(`${config.api.storiesUrl}/immigrant`);
             this.setState({immigrants: res.data});
-            this.setState({imageCard: res.data});
             console.log(this.state.immigrants)
         } catch (err) {
             console.log(`An error has occured: ${err}`);
         }
     }
+
+    getS3ImagesAPi = async (imageUrl) => {
+        // add call to AWS API Gateway to fetch immigrants here
+        //then set them in state
+        try {
+            const res = await axios.get(imageUrl);
+            this.setState({immigrants: res.data});
+            console.log(this.state.immigrants)
+        } catch (err) {
+            console.log(`An error has occured: ${err}`);
+        }
+    }
+
 
     componentDidMount = () => {
         this.getImmigrants();
@@ -37,7 +49,7 @@ class Stories extends Component {
                         <Card
                             cardClass={style.Card}
                             key={immigrant.id}
-                            photo={picture}
+                            photo={this.getS3ImagesAPi(immigrant.imageUrl)}
                             name={immigrant.firstName + " " + immigrant.lastName}
                             tag={immigrant.profession}
                             tagId={'/story/' + immigrant.id}
@@ -53,11 +65,11 @@ class Stories extends Component {
         return (
 
             <div>
-                <div className={styles.storiesDivider}>
-                    <h1 className={styles.Stories}>Immigrant Stories</h1>
-                    <hr className={styles.Divider}/>
+                <div className={style.storiesDivider}>
+                    <h1 className={style.Stories}>Immigrant Stories</h1>
+                    <hr className={style.Divider}/>
                 </div>
-                <div className={styles.cardsList}>
+                <div className={style.cardsList}>
                     {immigrantsList}
                 </div>
             </div>
