@@ -17,8 +17,7 @@ class Card extends Component {
                 <h2 className={style.tag}>{this.props.tag}</h2>
                 <div>
                     <Link to={this.props.tagId}>
-
-                        <p>Learn More <i className="fa fa-chevron-right"></i> </p>
+                        <p>Learn More <i className="far fa-arrow-alt-circle-right"/></p>
                     </Link>
                 </div>
             </section>
