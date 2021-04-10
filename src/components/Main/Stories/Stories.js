@@ -3,7 +3,7 @@ import axios from 'axios';
 import picture from "../../../assets/immidream.jpeg";
 import Card from "../Card/Card";
 import * as ReactBootstrap from "react-bootstrap";
-import styles from "./Stories.module.css";
+import style from "./Stories.module.css";
 
 const config = require('../../../config.json');
 
@@ -31,18 +31,20 @@ class Stories extends Component {
     render() {
         const {immigrants} = this.state;
         const immigrantsList = immigrants.length ?
-            (immigrants.map(immigrant => {
-                return (
-                    <Card
-                        cardClass={styles.cardsList}
-                        key={immigrant.id}
-                        photo={picture}
-                        name={immigrant.firstName + " " + immigrant.lastName}
-                        tag={immigrant.profession}
-                        tagId={'/story/' + immigrant.id}
-                    />
-                )
-            })) : (
+            <div className={style.Stories}>
+                {immigrants.map(immigrant => (
+                        <Card
+                            cardClass={style.Card}
+                            key={immigrant.id}
+                            photo={picture}
+                            name={immigrant.firstName + " " + immigrant.lastName}
+                            tag={immigrant.profession}
+                            tagId={'/story/' + immigrant.id}
+                        />
+                    )
+                )}
+            </div>
+            : (
                 <div className="has-text-centered">
                     <ReactBootstrap.Spinner animation="grow" size="sm" variant="primary"/>
                 </div>
@@ -50,11 +52,9 @@ class Stories extends Component {
         return (
 
             <div>
-                <div className={styles.storiesDivider}>
-                    <h1 className={styles.Stories}>The Immigrant Stories</h1>
-                    <hr className={styles.Divider}/>
-                </div>
-                <div className={styles.cardsList}>
+                <div className={style.StoriesContainer}>
+                    <h1 className={style.StoriesHeader}>The Immigrant Stories</h1>
+                    <hr className={style.Divider}/>
                     {immigrantsList}
                 </div>
             </div>
