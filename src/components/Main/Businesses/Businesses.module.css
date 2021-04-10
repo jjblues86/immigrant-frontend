@@ -6,6 +6,15 @@
     padding: 1rem;
 }
 
+.Businesses {
+    text-align: center;
+    font-family: "Font Awesome\ 5 Free", sans-serif;
+    color: #0984e3;
+    font-weight: bold;
+    font-size: larger;
+    padding: 1rem;
+}
+
 /*@media (min-width: 40rem){*/
 /*    .cards {*/
 /*    grid-template-columns: repeat(2, 1fr);*/
@@ -107,7 +116,7 @@
 .cardContent {
     grid-column: 1 / 2;
     grid-row: 2 / 2;
-    padding: 1.5rem;
+    padding: 2.5rem;
 }
 
 @media (min-width: 40rem) {

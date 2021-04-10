@@ -9,6 +9,10 @@
 
   "contactApi" : {
     "contactUrl" : "https://fyq7ujacf9.execute-api.us-east-1.amazonaws.com/dev/contact-me"
+  },
+
+  "getS3ImagesAPi" : {
+    "imagesUrl" : "https://pes6ci3e4b.execute-api.us-east-1.amazonaws.com/v1/s3"
   }
 }
 

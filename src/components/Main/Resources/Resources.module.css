@@ -15,10 +15,19 @@
     background: #faf6f6;
 }
 
+.Divider{
+    width: 2.5rem;
+    margin: auto;
+    background: #0984e3;
+}
+
 .Header {
-    font-weight: bold;
-    font-size: 3em;
     text-align: center;
+    font-family: "Font Awesome\ 5 Free", sans-serif;
+    color: #0984e3;
+    font-weight: bold;
+    font-size: larger;
+    padding: 1rem;
 }
 
 a {

@@ -1,10 +1,12 @@
 import React from 'react';
 import style from "./Resources.module.css";
+import styles from "../Stories/Stories.module.css";
 
 const resources = () => {
     return (
         <div>
             <h1 className={style.Header}>Resources</h1>
+            <hr className={style.Divider}/>
             <div className={style.ResourcesContainer}>
                 <div className={[style.Resources, style.Left].join(" ")}>
                     <a href="https://www.aclu.org/" target="_blank" rel="noreferrer noopener"><p>ACLU</p></a>

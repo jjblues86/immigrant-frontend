@@ -9,7 +9,7 @@ const config = require('../../../config.json');
 
 class Stories extends Component {
     state = {
-        immigrants: [],
+        immigrants: []
     }
 
     getImmigrants = async () => {
@@ -18,6 +18,7 @@ class Stories extends Component {
         try {
             const res = await axios.get(`${config.api.storiesUrl}/immigrant`);
             this.setState({immigrants: res.data});
+            this.setState({imageCard: res.data});
             console.log(this.state.immigrants)
         } catch (err) {
             console.log(`An error has occured: ${err}`);
@@ -52,9 +53,11 @@ class Stories extends Component {
         return (
 
             <div>
-                <div className={style.StoriesContainer}>
-                    <h1 className={style.StoriesHeader}>The Immigrant Stories</h1>
-                    <hr className={style.Divider}/>
+                <div className={styles.storiesDivider}>
+                    <h1 className={styles.Stories}>Immigrant Stories</h1>
+                    <hr className={styles.Divider}/>
+                </div>
+                <div className={styles.cardsList}>
                     {immigrantsList}
                 </div>
             </div>
