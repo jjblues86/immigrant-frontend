@@ -18,8 +18,7 @@ class Card extends Component {
                 <h3>{this.props.desc}</h3>
                 <div>
                     <Link to={this.props.tagId}>
-
-                        <p>Learn More <i className="fa fa-chevron-right"></i> </p>
+                        <p>Learn More <i className="far fa-arrow-alt-circle-right"/></p>
                     </Link>
                 </div>
             </section>

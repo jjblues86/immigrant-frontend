@@ -1,21 +1,7 @@
-.MinHeight {
-    min-height: 60vh;
+body {
+    height: 100vh;
 }
 
-/*.Content {*/
-/*    margin: 0 10% 0;*/
-/*}*/
-
-/*@media (max-width: 575.99px) {*/
-/*    .Content {*/
-/*        margin-left: 2.5%;*/
-/*        margin-right: 2.5%;*/
-/*    }*/
-/*}*/
-
-/*@media (min-width: 575.99px) and (max-width: 800px) {*/
-/*    .Content {*/
-/*        margin-left: 3%;*/
-/*        margin-right: 3%;*/
-/*    }*/
-/*}*/
+.MinHeight {
+    min-height: 70vh; /* 100vh - nav vh - footer vh*/
+}

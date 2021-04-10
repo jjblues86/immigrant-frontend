@@ -1,47 +1,113 @@
-.Stories {
-    text-align: center;
-    font-family: "Font Awesome\ 5 Free", sans-serif;
-    color: #0984e3;
-    font-weight: bold;
-    font-size: larger;
-    padding: 1rem;
+.StoriesContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    margin: 0.5rem 0.5rem;
+    flex-direction: row;
 }
 
-.Divider{
-    width: 2.5rem;
-    margin: auto;
+.StoriesHeader {
+    display: flex;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    justify-content: center;
+    font-family: "Font Awesome\ 5 Free", sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 0;
+    color: #0984e3;
+}
+
+.Divider {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 2rem;
     background: #0984e3;
 }
 
-.storiesDivider{
-    padding: 2.5rem;
+.Stories {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+    padding-right: 2rem;
+    margin: 2rem auto;
+    text-align: justify;
 }
 
-.StoriesCard {
-    text-align: center;
-    padding: 2.5rem;
-    margin: 0.5rem 0;
-    display: inline-block;
-    width: 100%;
-    vertical-align: middle;
-    border: 1px solid #dcdacb;
-    border-radius: 5px;
-    transition: linear 100ms;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    opacity: .8;
+.Card {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-/*@media (min-width: 40rem){*/
-/*    .cardsList {*/
-/*        grid-template-columns: repeat(2, 1fr);*/
-/*    }*/
-/*}*/
+@media (min-width: 48rem) and (max-width: 64rem) {
+    .StoriesContainer {
+        display: grid;
+        margin: 0.5rem 2rem;
+    }
 
-@media (min-width: 40rem) {
-    .cardsList{
-        width: 100%;
+    .StoriesHeader {
         display: flex;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        font-family: "Font Awesome\ 5 Free", sans-serif;
+        font-weight: bold;
+        font-size: larger;
         justify-content: center;
-        align-items: center;
+        padding: 0;
+        color: #0984e3;
+    }
+
+    .Stories {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        padding: 0;
+    }
+
+    .Card {
+        padding: 1rem;
+        align-content: center;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 64.1rem) {
+    .StoriesContainer {
+        display: grid;
+        margin: 0.5rem auto;
+        max-width: 100rem;
+    }
+
+    .StoriesHeader {
+        display: flex;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        font-family: "Font Awesome\ 5 Free", sans-serif;
+        font-weight: bold;
+        font-size: larger;
+        justify-content: center;
+        padding: 0;
+        color: #0984e3;
+    }
+
+    .Stories {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        padding: 0;
+    }
+
+    .Card {
+        padding: 1rem;
+        align-content: center;
+        flex-direction: row;
     }
 }
