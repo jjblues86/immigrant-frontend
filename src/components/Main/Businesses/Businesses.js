@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import BusinessCard from "../Card/BusinessCard";
-import picture from "../../../assets/business.jpeg";
+import picture from "../../../assets/ImageSize380x300.jpg";
 import * as ReactBootstrap from "react-bootstrap";
+import Card from "../Card/Card";
+import styles from "../Stories/Stories.module.css";
+import style from "../Businesses/Businesses.module.css";
 
 const config = require('../../../config.json');
 
@@ -22,6 +25,13 @@ class Businesses extends Component {
         }
     }
 
+    // getS3Images = async () => {
+    //
+    //     try {
+    //         const res = await axios.get(`${config.getS3ImagesAPi.imagesUrl}`)
+    //     }
+    // }
+
     componentDidMount = () => {
         this.getBusinesses();
     }
@@ -37,6 +47,8 @@ class Businesses extends Component {
                         photo={picture}
                         name={business.businessName}
                         tag={'Business Type: ' + business.businessType}
+                        web={business.businessSite}
+                        add={business.businessLocation}
                         tagId={'/business/' + business.id}>
                     </BusinessCard>
                 )
@@ -49,6 +61,10 @@ class Businesses extends Component {
         )
         return (
             <div>
+                <div className={styles.storiesDivider}>
+                    <h1 className={style.Businesses}>Immigrant Businesses</h1>
+                    <hr className={styles.Divider}/>
+                </div>
                 <div>
                     {businessesList}
                 </div>

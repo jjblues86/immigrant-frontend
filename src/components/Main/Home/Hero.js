@@ -1,5 +1,5 @@
 import React , {Component} from "react";
-import immigrantImage from "../../../assets/immigrants.jpg";
+import immigrantImage from "../../../assets/ImmiHero.jpg";
 import classNames from "classnames";
 
 export default class Hero extends Component{
