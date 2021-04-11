@@ -1,14 +1,11 @@
 import React from 'react';
 import photo from '../../../assets/Jerome.png';
 import picture from '../../../assets/Abc.png';
-import styles from '../Stories/Stories.module.css'
-
 const About = () => {
     return (
         <section className="container-fluid">
             <div className="has-text-centered">
-                <h1 className={styles.Stories}>About Us</h1>
-                <hr className={styles.Divider}/>
+                <h1 className="title is-1 Blue">About Us</h1>
             </div>
             <br/>
             <div className="row">
@@ -19,7 +16,7 @@ const About = () => {
                         <div className="card-content">
                             <div className="content">
                                 <h4>Our Mission</h4>
-                                <p>To connect the immigrant communities together and share their unique stories for inspiration and awareness.</p>
+                                <p>To connect the immigrant communities together and share their unique stories for inspiration and awareness on a broader scale.</p>
                             </div>
                         </div>
                     </div>
@@ -51,8 +48,7 @@ const About = () => {
             </div>
             <br/>
             <div className="has-text-centered">
-            <h1 className={styles.Stories}>Creators</h1>
-                <hr className={styles.Divider}/>
+                <h3 className="title is-2 Blue">Creators</h3>
             </div>
             <br/>
             <article className="media">
@@ -66,16 +62,15 @@ const About = () => {
                         <p>
                             <strong>Jerome Joof</strong>
                             <br/>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
-                                pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis
-                                feugiat facilisis.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                            pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis
+                            feugiat facilisis.
                         </p>
                     </div>
                 </div>
             </article>
             <br/>
             <br/>
-
             <article className="media">
                 <figure className="media-left">
                     <p className="image is-128x128">
@@ -98,5 +93,4 @@ const About = () => {
         </section>
     )
 };
-
 export default About;
