@@ -16,7 +16,7 @@ const About = () => {
                         <div className="card-content">
                             <div className="content">
                                 <h4>Our Mission</h4>
-                                <p>To connect the immigrant communities together and share their unique stories for inspiration and awareness on a broader scale.</p>
+                                <p>To connect the immigrant communities together and share their unique stories for inspiration and awareness.</p>
                             </div>
                         </div>
                     </div>
