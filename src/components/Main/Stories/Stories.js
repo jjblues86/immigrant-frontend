@@ -24,7 +24,6 @@ class Stories extends Component {
             console.log(`An error has occured: ${err}`);
         }
     }
-
     componentDidMount = () => {
         this.getImmigrants();
     }
@@ -53,11 +52,9 @@ class Stories extends Component {
         return (
 
             <div>
-                <div className={styles.storiesDivider}>
-                    <h1 className={styles.Stories}>Immigrant Stories</h1>
-                    <hr className={styles.Divider}/>
-                </div>
-                <div className={styles.cardsList}>
+                <div className={style.StoriesContainer}>
+                    <h1 className={style.StoriesHeader}>The Immigrant Stories</h1>
+                    <hr className={style.Divider}/>
                     {immigrantsList}
                 </div>
             </div>
