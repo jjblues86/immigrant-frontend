@@ -7,24 +7,17 @@
 }
 
 .StoriesHeader {
-    display: flex;
-    grid-column: 1 / span 1;
-    grid-row: 1 / span 1;
-    justify-content: center;
+    text-align: center;
     font-family: "Font Awesome\ 5 Free", sans-serif;
+    color: #0984e3;
     font-weight: bold;
     font-size: larger;
-    margin-left: 0;
-    color: #0984e3;
+    padding: 1rem;
 }
 
-.Divider {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    margin: 0 auto 2rem;
+.Divider{
+    width: 2.5rem;
+    margin: auto;
     background: #0984e3;
 }
 
@@ -50,15 +43,12 @@
     }
 
     .StoriesHeader {
-        display: flex;
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
+        text-align: center;
         font-family: "Font Awesome\ 5 Free", sans-serif;
+        color: #0984e3;
         font-weight: bold;
         font-size: larger;
-        justify-content: center;
-        padding: 0;
-        color: #0984e3;
+        padding: 1rem;
     }
 
     .Stories {
@@ -85,15 +75,12 @@
     }
 
     .StoriesHeader {
-        display: flex;
-        grid-column: 1 / span 1;
-        grid-row: 1 / span 1;
+        text-align: center;
         font-family: "Font Awesome\ 5 Free", sans-serif;
+        color: #0984e3;
         font-weight: bold;
         font-size: larger;
-        justify-content: center;
-        padding: 0;
-        color: #0984e3;
+        padding: 1rem;
     }
 
     .Stories {
