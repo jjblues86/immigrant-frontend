@@ -1,8 +1,6 @@
 import React from 'react';
 import photo from '../../../assets/Jerome.png';
 import picture from '../../../assets/Abc.png';
-import styles from '../Stories/Stories.module.css'
-
 const About = () => {
     return (
         <section className="container-fluid">
@@ -66,16 +64,15 @@ const About = () => {
                         <p>
                             <strong>Jerome Joof</strong>
                             <br/>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
-                                pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis
-                                feugiat facilisis.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                            pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis
+                            feugiat facilisis.
                         </p>
                     </div>
                 </div>
             </article>
             <br/>
             <br/>
-
             <article className="media">
                 <figure className="media-left">
                     <p className="image is-128x128">
@@ -98,5 +95,4 @@ const About = () => {
         </section>
     )
 };
-
 export default About;

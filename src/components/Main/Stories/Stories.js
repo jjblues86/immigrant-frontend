@@ -37,7 +37,6 @@ class Stories extends Component {
         }
     }
 
-
     componentDidMount = () => {
         this.getImmigrants();
     }
