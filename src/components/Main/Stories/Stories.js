@@ -4,6 +4,7 @@ import picture from "../../../assets/immidream.jpeg";
 import Card from "../Card/Card";
 import * as ReactBootstrap from "react-bootstrap";
 import style from "./Stories.module.css";
+import ImageCard from "../Card/ImageCard";
 
 const config = require('../../../config.json');
 
@@ -49,7 +50,7 @@ class Stories extends Component {
                         <Card
                             cardClass={style.Card}
                             key={immigrant.id}
-                            photo={this.getS3ImagesAPi(immigrant.imageUrl)}
+                            photo={ImageCard}
                             name={immigrant.firstName + " " + immigrant.lastName}
                             tag={immigrant.profession}
                             tagId={'/story/' + immigrant.id}
@@ -66,7 +67,7 @@ class Stories extends Component {
 
             <div>
                 <div className={style.storiesDivider}>
-                    <h1 className={style.Stories}>Immigrant Stories</h1>
+                    <h1 className={style.StoriesHeader}>Immigrant Stories</h1>
                     <hr className={style.Divider}/>
                 </div>
                 <div className={style.cardsList}>

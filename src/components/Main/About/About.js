@@ -7,7 +7,7 @@ const About = () => {
     return (
         <section className="container-fluid">
             <div className="has-text-centered">
-                <h1 className={styles.Stories}>About Us</h1>
+                <h1 className={styles.StoriesHeader}>About Us</h1>
                 <hr className={styles.Divider}/>
             </div>
             <br/>
@@ -51,7 +51,7 @@ const About = () => {
             </div>
             <br/>
             <div className="has-text-centered">
-            <h1 className={styles.Stories}>Creators</h1>
+            <h1 className={styles.StoriesHeader}>Creators</h1>
                 <hr className={styles.Divider}/>
             </div>
             <br/>

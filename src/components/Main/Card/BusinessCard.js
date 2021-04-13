@@ -14,9 +14,9 @@ class BusinessCard extends Component {
                     </div>
                 </div>
                 <div className={styles.cardContent}>
-                <h1 className={styles.cardTitle}>{this.props.name}</h1>
+                    <a href={this.props.web} target="_blank" rel="noreferrer noopener"><h1 className={styles.cardTitle}>{this.props.name}</h1></a>
                 <h2 className={styles.cardDescription}>{this.props.tag}</h2>
-                    <a href={this.props.web} target="_blank" rel="noreferrer noopener"><h2 className={styles.cardDescription}>{this.props.web}</h2></a>
+                    {/*<a href={this.props.web} target="_blank" rel="noreferrer noopener"><h2 className={styles.cardDescription}>{this.props.web}</h2></a>*/}
                 <h2 className={styles.cardDescription}>{this.props.add}</h2>
                 </div>
             </div>
