@@ -1,6 +1,7 @@
 import React from 'react';
 import photo from '../../../assets/Jerome.png';
 import picture from '../../../assets/Abc.png';
+import styles from '../Stories/Stories.module.css';
 const About = () => {
     return (
         <section className="container-fluid">
