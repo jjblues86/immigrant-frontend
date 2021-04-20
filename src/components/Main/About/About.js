@@ -1,11 +1,13 @@
 import React from 'react';
 import photo from '../../../assets/Jerome.png';
 import picture from '../../../assets/Abc.png';
+import styles from '../Stories/Stories.module.css';
 const About = () => {
     return (
         <section className="container-fluid">
             <div className="has-text-centered">
-                <h1 className="title is-1 Blue">About Us</h1>
+                <h1 className={styles.StoriesHeader}>About Us</h1>
+                <hr className={styles.Divider}/>
             </div>
             <br/>
             <div className="row">
@@ -48,7 +50,8 @@ const About = () => {
             </div>
             <br/>
             <div className="has-text-centered">
-                <h3 className="title is-2 Blue">Creators</h3>
+            <h1 className={styles.StoriesHeader}>Creators</h1>
+                <hr className={styles.Divider}/>
             </div>
             <br/>
             <article className="media">

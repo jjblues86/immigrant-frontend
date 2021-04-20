@@ -1,16 +1,36 @@
-const imageCard = [
-    {
-        img: "https://s3.amazonaws.com/theimmigrantdream.com/home-image.jpg",
-        desc: "Immigrant"
-    },
-    {
-        img:
-            "https://images.unsplash.com/photo-1564198879220-63f2734f7cec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2072&q=80",
-        desc: "Space"
-    },
-    {
-        img:
-            "https://images.unsplash.com/photo-1559534747-b6ea1cae1c88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1301&q=80",
-        desc: "road"
-    },
-]
+import React, {Component} from 'react';
+import AWS from 'aws-sdk';
+
+const awsS3Bucket = new AWS.S3();
+
+const params = {
+    Bucket: "theimmigrantdream.com",
+    Key: "home-image.jpg"
+}
+
+class ImageCard extends Component{
+    state = {fileUrl: ''}
+
+    componentDidMount = () => {
+        awsS3Bucket.getObject(params)
+            .then(data => {
+                this.setState({
+                    fileUrl: data
+                })
+            })
+            .catch(err => {
+                console.log('error fetching image')
+            })
+    }
+
+    render() {
+        return (
+            <div>
+                <img src={this.state.fileUrl} />
+            </div>
+        )
+    }
+
+}
+
+export default ImageCard;
