@@ -3,8 +3,6 @@ import axios from 'axios';
 import BusinessCard from "../Card/BusinessCard";
 import picture from "../../../assets/ImageSize380x300.jpg";
 import * as ReactBootstrap from "react-bootstrap";
-import Card from "../Card/Card";
-import styles from "../Stories/Stories.module.css";
 import style from "../Businesses/Businesses.module.css";
 
 const config = require('../../../config.json');
@@ -61,9 +59,9 @@ class Businesses extends Component {
         )
         return (
             <div>
-                <div className={styles.storiesDivider}>
+                <div>
                     <h1 className={style.Businesses}>Immigrant Businesses</h1>
-                    <hr className={styles.Divider}/>
+                    <hr className={style.Divider}/>
                 </div>
                 <div>
                     {businessesList}
