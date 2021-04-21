@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 1rem 0.5rem;
     text-align: justify;
     box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
@@ -13,11 +14,12 @@
     text-decoration: none;
 }
 
-.Resource a {
+.Resource h1 {
     color: white;
+    font-weight: bold;
 }
 
-.Resource a:hover {
+/*.Resource a:hover {
     background: white;
     color: #113082;
     min-width: 20rem;
@@ -28,4 +30,33 @@
     align-items: center;
     justify-content: center;
     padding: 0 0.5rem;
+}*/
+
+.Resource p {
+    color: grey;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.ButtonContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+.Button {
+    /*box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
+    background: white;
+    border-radius: 10px;*/
+    color: white;
+    font-weight: normal;
+    font-size: 2rem;
+    padding: 0.25rem;
+}
+
+.Button:hover{
+    box-shadow: 3px 3px 5px 3px rgba(0.1, 0.1, 0.1, 0.1);
+    background: white;
+    border-radius: 10px;
+    color: #113082;
 }
