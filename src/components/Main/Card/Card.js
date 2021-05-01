@@ -11,10 +11,10 @@ class Card extends Component {
     render() {
 
         return (
-            <section onClick={this.storyData} className={style.cards}>
+            <section onClick={this.storyData} className={style.Cards}>
                 <img src={this.props.photo} alt={this.props.name}/>
-                <h1 className={style.name}>{this.props.name}</h1>
-                <h2 className={style.tag}>{this.props.tag}</h2>
+                <h1 className={style.Name}>{this.props.name}</h1>
+                <h2 className={style.Tag}>{this.props.tag}</h2>
                 <h3>{this.props.desc}</h3>
                 <div>
                     <Link to={this.props.tagId}>

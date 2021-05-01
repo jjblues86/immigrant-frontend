@@ -4,17 +4,17 @@ a:active {
     color: black;
 }
 
-.name {
+.Name {
     margin: 0.5rem 0;
 }
 
-.tag {
+.Tag {
     font-family: "Font Awesome\ 5 Free", sans-serif;
     font-weight: bold;
     margin: 0.5rem 0;
 }
 
-.cards {
+.Cards {
     text-align: center;
     margin: 1rem;
     display: inline-block;
@@ -28,19 +28,19 @@ a:active {
     width: 100%;
 }
 
-.cards:hover {
+.Cards:hover {
     box-shadow: 8px 8px 16px 8px rgba(0.5, 0.5, 0, 0.2);
 }
 
 @media (min-width: 48rem) and (max-width: 64rem) {
-    .cards {
+    .Cards {
         margin: 1rem auto;
         width: 90%;
     }
 }
 
 @media (min-width: 64.1rem) {
-    .cards {
+    .Cards {
         margin: 1rem auto;
         width: 90%;
     }

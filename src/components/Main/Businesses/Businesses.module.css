@@ -15,17 +15,15 @@
     padding: 1rem;
 }
 
-.Divider{
-    width: 2.5rem;
-    margin: auto;
+.Divider {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 2rem;
     background: #0984e3;
 }
-
-/*@media (min-width: 40rem){*/
-/*    .cards {*/
-/*    grid-template-columns: repeat(2, 1fr);*/
-/*    }*/
-/*}*/
 
 .card {
     display: grid;
@@ -62,7 +60,7 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .cards:hover {

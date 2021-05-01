@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from "axios";
 import * as ReactBootstrap from 'react-bootstrap';
-import picture from "../../../assets/immidream.jpeg";
 import Card from '../Card/Card';
 import HomeContent from "./HomeContent";
 import style from "./Home.module.css";
