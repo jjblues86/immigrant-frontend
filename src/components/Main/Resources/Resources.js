@@ -1,32 +1,48 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from "./Resources.module.css";
-import styles from "../Stories/Stories.module.css";
+import Resource from "./Resource/Resource";
 
-const resources = () => {
+const Resources = () => {
+    let [resourses] = useState([
+        {
+            name: "ACLU",
+            url: "https://www.aclu.org/",
+            message: "\"The ACLU dares to create a more perfect union — beyond one person, party, or side.\""
+        },
+        {
+            name: "USCIS",
+            url: "https://www.uscis.gov/",
+            message: "U.S. Citizenship and Immigration Services (USCIS) is the federal agency that oversees lawful immigration to the United States."
+        },
+        {
+            name: "BOUNDLESS",
+            url: "https://www.boundless.com/",
+            message: "\"Our service gives you an immigration lawyer, lets you file online — all while saving you thousands in fees.\""
+        },
+        {
+            name: "NATIONAL IMMIGRATION FORUM",
+            url: "https://immigrationforum.org/",
+            message: "\"Founded in 1982, the National Immigration Forum advocates for the value of immigrants and immigration to our nation.\""
+        },
+        {
+            name: "REGISTER TO VOTE",
+            url: "https://vote.gov/",
+            message: "As a citizen, it is your to vote."
+        }
+    ]);
     return (
-        <div>
+        <div className={style.ResourcesContainer}>
             <h1 className={style.Header}>Resources</h1>
             <hr className={style.Divider}/>
-            <div className={style.ResourcesContainer}>
-                <div className={[style.Resources, style.Left].join(" ")}>
-                    <a href="https://www.aclu.org/" target="_blank" rel="noreferrer noopener"><p>ACLU</p></a>
-                </div>
-                <div className={[style.Resources, style.Right].join(" ")}>
-                    <a href="https://www.uscis.gov/" target="_blank" rel="noreferrer noopener"><p>USCIS</p></a>
-                </div>
-                <div className={[style.Resources, style.Left].join(" ")}>
-                    <a href="https://www.boundless.com/" target="_blank" rel="noreferrer noopener"><p>BOUNDLESS</p></a>
-                </div>
-                <div className={[style.Resources, style.Right].join(" ")}>
-                    <a href="https://immigrationforum.org/" target="_blank" rel="noreferrer noopener"><p>NATIONAL
-                        IMMIGRATION FORUM</p></a>
-                </div>
-                <div className={[style.Resources, style.Left].join(" ")}>
-                    <a href="https://vote.gov/" target="_blank" rel="noreferrer noopener"><p>REGISTER TO VOTE</p></a>
-                </div>
-            </div>
+            {resourses.map(resource => (
+                <Resource
+                    key={resource.name}
+                    url={resource.url}
+                    name={resource.name}
+                    message={resource.message}/>
+            ))}
         </div>
     )
 }
 
-export default resources;
+export default Resources;

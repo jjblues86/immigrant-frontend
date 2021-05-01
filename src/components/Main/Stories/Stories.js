@@ -65,11 +65,11 @@ class Stories extends Component {
         return (
 
             <div>
-                <div className={style.storiesDivider}>
+                <div>
                     <h1 className={style.StoriesHeader}>Immigrant Stories</h1>
                     <hr className={style.Divider}/>
                 </div>
-                <div className={style.cardsList}>
+                <div className={style.StoriesContainer}>
                     {immigrantsList}
                 </div>
             </div>
