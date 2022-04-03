@@ -15,6 +15,11 @@ const Resources = () => {
             message: "U.S. Citizenship and Immigration Services (USCIS) is the federal agency that oversees lawful immigration to the United States."
         },
         {
+            name: "NATIONAL VISA CENTER",
+            url: "https://travel.state.gov/",
+            message: "U.S. Department of STATE - BUREAU of CONSULAR AFFAIRS"
+        },
+        {
             name: "BOUNDLESS",
             url: "https://www.boundless.com/",
             message: "\"Our service gives you an immigration lawyer, lets you file online — all while saving you thousands in fees.\""
@@ -27,7 +32,7 @@ const Resources = () => {
         {
             name: "REGISTER TO VOTE",
             url: "https://vote.gov/",
-            message: "As a citizen, it is your to vote."
+            message: "It is your to vote as a citizen."
         }
     ]);
     return (
