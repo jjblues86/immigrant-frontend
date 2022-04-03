@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+ import React, {useState} from 'react';
 import style from "./Resources.module.css";
 import Resource from "./Resource/Resource";
 
@@ -13,6 +13,11 @@ const Resources = () => {
             name: "USCIS",
             url: "https://www.uscis.gov/",
             message: "U.S. Citizenship and Immigration Services (USCIS) is the federal agency that oversees lawful immigration to the United States."
+        },
+        {
+            name: "NATIONAL VISA CENTER",
+            url: "https://travel.state.gov/",
+            message: "U.S. Department of STATE - BUREAU of CONSULAR AFFAIRS"
         },
         {
             name: "BOUNDLESS",
