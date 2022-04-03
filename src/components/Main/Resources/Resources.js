@@ -32,7 +32,7 @@ const Resources = () => {
         {
             name: "REGISTER TO VOTE",
             url: "https://vote.gov/",
-            message: "As a citizen, it is your to vote."
+            message: "It is your right to vote as a citizen."
         }
     ]);
     return (
