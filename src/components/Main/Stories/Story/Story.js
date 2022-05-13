@@ -31,7 +31,7 @@ class Story extends Component {
             <div className={style.MainContainer}>
                 <div className={style.ImageAndDetailContainer}>
                     <div className={style.ContainerImage}>
-                        <img src={picture} alt={this.state.immigrant.name} className={style.Image}/>
+                        <img src={this.state.immigrant.image} alt={this.state.immigrant.name} className={style.Image}/>
                     </div>
                     <div className={style.Detail}>
                         <h2 className={style.Name}>{this.state.immigrant.name}</h2>

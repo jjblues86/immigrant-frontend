@@ -65,7 +65,7 @@ class Home extends Component {
                 {immigrants.map(immigrant => (
                         <Card className={style.Card}
                               key={immigrant.id}
-                              photo={imageCard.img}
+                              photo={immigrant.image}
                               name={immigrant.firstName + " " + immigrant.lastName}
                               random={imageCard.desc}
                               tag={immigrant.quote}

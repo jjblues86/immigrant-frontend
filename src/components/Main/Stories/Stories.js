@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import picture from "../../../assets/immidream.jpeg";
 import Card from "../Card/Card";
 import * as ReactBootstrap from "react-bootstrap";
 import style from "./Stories.module.css";
-import ImageCard from "../Card/ImageCard";
 
 const config = require('../../../config.json');
 
@@ -49,7 +47,7 @@ class Stories extends Component {
                         <Card
                             cardClass={style.Card}
                             key={immigrant.id}
-                            photo={ImageCard}
+                            photo={immigrant.image}
                             name={immigrant.firstName + " " + immigrant.lastName}
                             tag={immigrant.profession}
                             tagId={'/story/' + immigrant.id}
