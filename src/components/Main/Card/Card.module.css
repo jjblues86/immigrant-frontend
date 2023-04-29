@@ -17,16 +17,21 @@ a:active {
 .Cards {
     text-align: center;
     margin: 1rem;
-    display: inline-block;
-    vertical-align: middle;
+    display: block;
     border: 1px solid #dcdacb;
     border-radius: 5px;
     transition: linear 100ms;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    opacity: .8;
     cursor: pointer;
     width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
 }
+
+.Img {
+    width: 100%;
+    height: auto;
+  }
 
 .Cards:hover {
     box-shadow: 8px 8px 16px 8px rgba(0.5, 0.5, 0, 0.2);

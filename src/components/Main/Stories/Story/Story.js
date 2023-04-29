@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Auxiliary from "../../../../hoc/Auxiliary/Auxiliary";
-import picture from '../../../../assets/immidream.jpeg'
 import axios from "axios";
 import SocialShare from "./SocialShare";
 import * as ReactBootstrap from "react-bootstrap";

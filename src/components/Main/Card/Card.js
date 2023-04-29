@@ -12,7 +12,7 @@ class Card extends Component {
 
         return (
             <section onClick={this.storyData} className={style.Cards}>
-                <img src={this.props.photo} alt={this.props.name}/>
+                <img src={this.props.photo} alt={this.props.name} className={style.Img}/>
                 <h1 className={style.Name}>{this.props.name}</h1>
                 <h2 className={style.Tag}>{this.props.tag}</h2>
                 <h3>{this.props.desc}</h3>
